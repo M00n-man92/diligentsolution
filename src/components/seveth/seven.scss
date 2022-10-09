@@ -1,0 +1,23 @@
+.seven{
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+  width: 200px;
+  align-items: center;
+  cursor: pointer;
+//  background-color: red;
+  img{
+
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 7px;
+
+  }
+  span{
+    // background-color: red;
+    font-size: 18px;
+    font-family: "Inter-Bold";
+    margin-top: 2%;
+  }
+}

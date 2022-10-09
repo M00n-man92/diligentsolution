@@ -1,0 +1,41 @@
+.five{
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  .first{
+    display: flex;
+    flex-direction: column;
+    .duos{
+      
+
+      h2{
+        color: #4A2C2A;
+        font-size: 48px;
+        font-family: "Roboto-Bold";
+
+      }
+    }
+    .wahid{
+      margin-top: 3%;
+      display: flex;
+      img{
+        flex: 1;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 7px;
+      }
+      .estnen{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1%;
+        p{
+          font-size: 20px;
+          font-family: "Roboto-Regular";
+          margin-bottom: 3%;
+        }
+      }
+    }
+    
+  }
+}

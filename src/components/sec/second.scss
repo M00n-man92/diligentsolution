@@ -1,0 +1,37 @@
+.second{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-top: 6%;
+  .one{
+    width: 560px;
+    // background-color: red;
+    h3{
+      font-size: 48px;
+      font-family: "ROboto-Bold";
+      color: #34251F;
+    }
+  }
+  .two{
+    margin-top: 3%;
+    margin-right: 10%;
+    display: flex;
+    .wahid{
+      display: flex;
+      flex: 3;
+      flex-direction: column;
+      align-items: center;
+      p{
+        font-size: 20px;
+        font-family: "Roboto-Regular";
+        margin-bottom: 3%;
+      }
+    }
+    .duos{
+      flex: 1;
+      margin-left: 1%;
+      background-color: red;
+    }
+    
+  }
+}
