@@ -8,31 +8,37 @@
   padding-bottom: 1%;
   padding-top: 1%;
   // background-color: red;
-  .first{
-    margin-right: 20px;
-    
-
-    span{
-      cursor: pointer;
-      color: #34251F;
-      font-family: "Roboto-Bold";
-      font-size: 19px;
+  .sec{
+    display: flex;
+    flex:1;
+    .first{
+      margin-right: 20px;
       
+  
+      a{
+        cursor: pointer;
+        color: #34251F;
+        font-family: "Roboto-Bold";
+        font-size: 19px;
+        text-decoration: none;
+
+        
+      }
     }
   }
+  
   .logo{
+    flex: 1;
     margin-right: 20px;
-    height: 30px;
-    width: 70px;
-    background-color: #34251F;
+    // background-color: red;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    
-    span{
-      color: white;
-      font-family: "Roboto-Regular";
-      font-size: 19px;
+    // background-color: red;
+    img{
+      height: 100%;
+      width: 30%;
+      object-fit: contain;
     }
   }
 }

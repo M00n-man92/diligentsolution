@@ -3,31 +3,33 @@ import "./nav.scss"
 export default function Nav() {
   return (
     <div className='nav'>
-      <div className="first">
-        <span>
-          About US
-        </span>
-      </div>
-      <div className="first">
-        <span>
-          Our Services
-        </span>
-      </div>
       <div className="logo">
-        <span>
-          LOGO
-        </span>
+       <img src="./assets/logo1.PNG" alt="" />
+      </div>
+      <div className="sec">
+      <div className="first">
+        <a href='#about us' >
+          About US
+        </a>
       </div>
       <div className="first">
-        <span>
+        <a href='#services'>
+          Our Services
+        </a>
+      </div>
+      
+      <div className="first">
+        <a>
           Member's Zone
-        </span>
+        </a>
       </div>
       <div className="first">
-        <span>
+        <a href='#contact us'>
           Contact Us
-        </span>
+        </a>
       </div>
+      </div>
+      
     </div>
   )
 }

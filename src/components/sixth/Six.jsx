@@ -104,7 +104,7 @@ export default function Six() {
 
   }
   return (
-    <div className='six'>
+    <div className='six' id="services">
       <div className="first">
         <div className="wahid">
           <h2>Coffee Profiles</h2>
@@ -116,23 +116,7 @@ export default function Six() {
               <Seven image={item.img} title={item.txt} />
             </div>
           )}
-
-          {/* <Modal open={open} onClose={() => {
-            setOpen(false)
-            setObj({})
-          }}> */}
-          {/* <div className={'dont ' + (open && "active")}> */}
-
-          {/* </div> */}
-
-
-
-
-          {/* </Modal> */}
         </div>
-        {/*  */}
-
-          
           <Eight isOpen={open} isSet={setOpen} isObj={setObj} neObj={obj}/>
 
 

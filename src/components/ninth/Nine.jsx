@@ -15,7 +15,7 @@ export default function Nine() {
     setAge();
   };
   return (
-    <div className='nine'>
+    <div className='nine' id="contact us">
       <div className="first">
         <div className="wahid">
           <h2>

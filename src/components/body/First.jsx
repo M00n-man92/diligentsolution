@@ -20,9 +20,9 @@ export default function () {
           </span>
         </div>
         <div className="three">
-          <button>
+          <a href="#contact us">
           SUBMIT YOUR REQUEST
-          </button>
+          </a>
         </div>
       </div>
 

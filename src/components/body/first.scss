@@ -39,10 +39,16 @@
     .three{
       margin-left: 10%;
       margin-top: 3%;
-      button{
-        width: 220px;
-        height: 52px;
-        background-color: #34251F;
+      width: 220px;
+        height: 42px;
+        background-color: #112D17;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      a{
+        text-decoration: none;
+        
+        
         color: white;
         font-size: 18px;
         font-family: "Roboto-Bold";
