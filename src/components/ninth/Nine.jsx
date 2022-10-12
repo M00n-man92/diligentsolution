@@ -31,7 +31,7 @@ export default function Nine() {
             <div className="image">
               <Phone />
             </div>
-            <span>+251 92 074 2369</span>
+            <span>+251 97 508 1993</span>
           </div>
           <div className="estenen">
             <div className="image">
