@@ -3,10 +3,13 @@ import { Modal } from '@mui/material';
 
 export default function Eight({ isOpen, isSet, isObj, neObj }) {
   return (
-    // <Modal open={isOpen} onClose={() => {
-    //   isSet(false)
-    //   isObj({})
-    // }}>
+  
+    // <Modal
+    //       hideBackdrop
+    //       open={isOpen}
+    //       onClose={() => isSet(!isOpen)}
+
+    //     >
       <div className={'eight ' + (isOpen && "active")}>
         <div className="first">
           <div className="wahid">
@@ -33,7 +36,7 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
             </div>
             <div className="somethin">
               <h2>
-              Processing
+                Processing
               </h2>
               <span>
                 {neObj.Processing}
@@ -41,7 +44,7 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
             </div>
             <div className="somethin">
               <h2>
-              Growing Altitude
+                Growing Altitude
               </h2>
               <span>
                 {neObj.Growing}
@@ -49,7 +52,7 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
             </div>
             <div className="somethin">
               <h2>
-              Harvest
+                Harvest
               </h2>
               <span>
                 {neObj.Harvest}
@@ -57,14 +60,14 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
             </div>
             <div className="somethin">
               <h2>
-              Availability
+                Availability
               </h2>
               <span>
-              {neObj.Availability}              </span>
+                {neObj.Availability}              </span>
             </div>
             <div className="somethin">
               <h2>
-              Renown Sub-Areas
+                Renown Sub-Areas
               </h2>
               <span>
                 {neObj.renown}
@@ -78,6 +81,8 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
           </div>
         </div>
       </div>
-    
+    //  </Modal>
+
+
   )
 }

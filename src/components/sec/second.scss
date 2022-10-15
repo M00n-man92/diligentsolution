@@ -1,35 +1,73 @@
+@media (max-width: 40em) {
+  .second{
+    max-width:40em;
+  }
+ }
+ 
 .second{
   display: flex;
   flex-direction: column;
   margin-left: 10%;
   margin-top: 6%;
+  @media (max-width: 40em) {
+    margin-left: 5%;
+    // background-color: red;
+    margin-top: 5%;
+   }
+   
   .one{
     width: 560px;
+    @media (max-width: 40em) {
+      width: 100%;
+     }
+     
     // background-color: red;
     h3{
       font-size: 48px;
       font-family: "ROboto-Bold";
       color: #112D17;
+      @media (max-width: 40em) {
+        font-size: 22px;
+       }
+       
     }
   }
   .two{
     margin-top: 3%;
     margin-right: 10%;
     display: flex;
+    @media (max-width: 40em) {
+      margin-right: 1%;
+      // margin-left: 3%;
+     }
+     
     .wahid{
       display: flex;
       flex: 3;
       flex-direction: column;
       align-items: center;
+      @media (max-width: 40em) {
+        flex: 2;
+        // background-color: red;
+       }
+       
       p{
         font-size: 20px;
         font-family: "Roboto-Regular";
         margin-bottom: 3%;
+        @media (max-width: 40em) {
+          font-size: 12px;
+         }
+         
       }
     }
     .duos{
       flex: 1;
       margin-left: 1%;
+      @media (max-width: 40em) {
+        // background-color: red;
+       }
+       
       // background-color: red;
     }
     

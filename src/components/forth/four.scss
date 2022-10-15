@@ -1,3 +1,9 @@
+@media (max-width: 40em) {
+  .four{
+    max-width: 40em;
+  }
+ }
+ 
 .four {
   margin-top: 3%;
   .first {
@@ -11,6 +17,11 @@
         object-fit: cover;
         overflow: hidden;
         filter: brightness(50%);
+        @media (max-width: 40em) {
+          height: 170px;
+          object-fit:fill;
+         }
+         
 
       }
     }
@@ -20,12 +31,24 @@
       margin-left: 10%;
       margin-right: 10%;
       margin-top: 6%;
+      @media (max-width: 40em) {
+        margin-left: 5%;
+        margin-right:5%;
+        margin-top: 10%;
+
+       }
+       
       p {
         font-size: 22px;
         text-align: center;
         font-family: "Roboto-Regular";
         color: #FFFFFF;
+        @media (max-width: 40em) {
+          font-size: 12px;
+         }
+         
       }
+
     }
   }
 }
