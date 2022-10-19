@@ -1,12 +1,33 @@
 import React from 'react'
 import "./three.scss";
+import { LazyLoadImage }
+  from 'react-lazy-load-image-component';
 
 export default function Three() {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  if( width > 900 ){
+    width =400;
+    height = 300
+  }
+  else {
+    width =width*1/3;
+    height = 250;
+  }
   return (
     <div className='three'>
       <div className="first">
         <div className="wahid">
-    <img src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6176.JPG?alt=media&token=5f501e7b-dbe2-4537-b2c2-4b1cb5e15d36" alt="" />
+        <LazyLoadImage
+        alt=""
+        width={width }
+        height={height }
+        src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6176.JPG?alt=media&token=5f501e7b-dbe2-4537-b2c2-4b1cb5e15d36" // use normal <img> attributes as prop
+        placeholderSrc="./assets/diligent.png"
+        effect='blur'
+        // className='img'
+     />
+    {/* <img src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6176.JPG?alt=media&token=5f501e7b-dbe2-4537-b2c2-4b1cb5e15d36" alt="" /> */}
         </div>
         <div className="estnen">
           <p>

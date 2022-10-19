@@ -12,12 +12,14 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import "./app.css";
 import Eleven from "./components/elventh/Eleven";
 const App = () => {
+  const w = window.innerWidth;
+  const h = window.innerHeight;
   return <div>
     <Router>
       <Switch>
         <div>
         <Nav />
-        <First />
+        <First width={w} height={h} />
         <Ten />
         <Second />
         <Three />
