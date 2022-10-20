@@ -1,17 +1,28 @@
 @media (max-width: 40em) {
   .four{
     max-width: 40em;
+    // height: 10%;
   }
  }
  
 .four {
+  // background-color: red;
   margin-top: 3%;
+  height: 250px;
+  @media (max-width: 40em) {
+    height: 180px;
+   }
+   
+  // height: 50%;
+  // background-color: red;
   .first {
     display: flex;
     flex-direction: column;
 
     .whaid {
+      // background-color: red;
       img {
+        z-index: 1;
         width: 100%;
         height: 240px;
         object-fit: cover;
@@ -26,12 +37,15 @@
       }
     }
     .estnen {
+      z-index: 2;
       display: flex;
-      position: absolute;
+      position: relative;
+      top: -250px;
       margin-left: 10%;
       margin-right: 10%;
       margin-top: 6%;
       @media (max-width: 40em) {
+        top: -170px;
         margin-left: 5%;
         margin-right:5%;
         margin-top: 10%;
@@ -43,6 +57,7 @@
         text-align: center;
         font-family: "Roboto-Regular";
         color: #FFFFFF;
+        // color: black;
         @media (max-width: 40em) {
           font-size: 12px;
          }

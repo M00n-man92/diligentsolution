@@ -2,25 +2,54 @@ import React, { useState } from 'react'
 import Axios from "axios"
 import { Phone, Email, LocationOn } from '@mui/icons-material';
 import "./nine.scss";
+
 import TextField from "@mui/material/TextField";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import CircularProgress from "@mui/material/CircularProgress";
+import Select from '@mui/material/Select';
+import { Button } from '@mui/material';
+
+import { useQuery, useMutation } from "react-query";
 export default function Nine() {
   const [age, setAge] = useState('');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false)
+  const [know, setKnow] = useState("")
+  const [error, setErrors] = useState(false)
+  const send = async (user) => {
+    const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+    return reply.data;
+  };
+  const { mutate, isLoading } = useMutation(send, {
+    onSuccess: (data) => {
+      setSuccess(true);
+      setErrors(false)
+      // console.log(data);
+      setKnow("User created successfully.");
+    },
+    onError: (e) => {
+      setErrors(true);
+      setKnow(e.response.data.error.message);
+      // console.log(e);
+    },
+  });
+  
   const handleChange = async (e) => {
-    e.preventDefault()
-    console.log("hello woeld")
-    const url = "http://localhost:5000/api/user/coffee"
-   
-    const body = {name,email,message,age}
-    const reaponce = await Axios.post(url,body)
-     console.log(reaponce)
+    e.preventDefault();
+    console.log("hellow")
+    const user = { name, email, message, age };
+    if (name.length > 1 && email.length > 1 && message.length > 1 ) {
+      mutate(user);
+    } else {
+      setErrors(true);
+      setKnow("please make sure you've correctly filled the boxes'");
+    }
+ console.log(error,know)
   };
   return (
     <div className='nine' id="contact us">
@@ -64,7 +93,8 @@ export default function Nine() {
           <TextField className='texting' label="Name"
             onChange={(e) => setName(e.target.value)}
             fullWidth
-            type="text" />
+            type="text" 
+            required/>
         </div>
         <div className="one">
           
@@ -73,6 +103,7 @@ export default function Nine() {
             onChange={(e) => setEmail(e.target.value)}
             fullWidth
             type="email"
+            required
           />
         </div>
         <div className="one">
@@ -85,6 +116,7 @@ export default function Nine() {
                 value={age}
                 label="Coffee Profile"
                 onChange={(e)=>setAge(e.target.value)}
+                required
               >
                 <MenuItem value="Djimmah">Djimmah</MenuItem>
                 <MenuItem value="Hrrar">Hrrar</MenuItem>
@@ -108,10 +140,17 @@ export default function Nine() {
             type="email"
             multiline
             rows={5}
+            required
           />
         </div>
         <div className="two">
-          <button onClick={(e)=>handleChange(e)}>Send Message</button>
+          <Button
+            onClick={(e)=>handleChange(e)}
+            type="submit"
+            disabled={isLoading}
+            startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null} 
+          > Send</Button>
+          {error?<span style={{color: "red", marginLeft:40}}> {know}</span>:<span></span>}
         </div>
       </div>
     </div>

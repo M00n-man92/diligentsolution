@@ -7,33 +7,37 @@ import Five from "./components/fifth/Five";
 import Six from "./components/sixth/Six";
 import Nine from "./components/ninth/Nine";
 import Ten from "./components/tenth/Ten"
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-
+import "./spp.scss";
 import "./app.css";
 import Eleven from "./components/elventh/Eleven";
 const App = () => {
+
   const w = window.innerWidth;
   const h = window.innerHeight;
-  return <div>
-    <Router>
-      <Switch>
-        <div>
-        <Nav />
-        <First width={w} height={h} />
-        <Ten />
-        <Second />
-        <Three />
-        <Four />
-        <Five />
+  return <>
+    <div className="app">
+      
+        
+    <div className="section">
+          <Nav />
+          <First width={w} height={h} />
+          <Ten />
+          <Second />
+          <Three />
+          <Four />
+          <Five />
 
-        <Six />
-        <Eleven />
-        <Nine />
-        </div>
+          <Six />
+          <Eleven />
+          <Nine />
+       </div>
+      </div>
 
-      </Switch>
-    </Router>
-  </div>;
+
+
+
+
+  </>;
 };
 
 export default App;
