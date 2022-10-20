@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Axios from "axios"
 import { Phone, Email, LocationOn } from '@mui/icons-material';
 import "./nine.scss";
 import TextField from "@mui/material/TextField";
@@ -11,8 +12,15 @@ export default function Nine() {
   const [age, setAge] = useState('');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const handleChange = () => {
-    setAge();
+  const [message, setMessage] = useState("");
+  const handleChange = async (e) => {
+    e.preventDefault()
+    console.log("hello woeld")
+    const url = "http://localhost:5000/api/user/coffee"
+   
+    const body = {name,email,message,age}
+    const reaponce = await Axios.post(url,body)
+     console.log(reaponce)
   };
   return (
     <div className='nine' id="contact us">
@@ -95,7 +103,7 @@ export default function Nine() {
           
           <TextField 
             className='texting' label="Message"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setMessage(e.target.value)}
             fullWidth
             type="email"
             multiline
@@ -103,7 +111,7 @@ export default function Nine() {
           />
         </div>
         <div className="two">
-          <button>Send Message</button>
+          <button onClick={(e)=>handleChange(e)}>Send Message</button>
         </div>
       </div>
     </div>
