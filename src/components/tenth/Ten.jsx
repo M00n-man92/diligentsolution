@@ -36,7 +36,7 @@ export default function Ten() {
         Principles
         </h2>
         <span>
-        We will attend to you and your interests without fault and vow to serve you with the integrity that befits you!
+        We will attend to you and your interests without fault, and we vow to serve you with the integrity that befits you! That is how we build trust as well as the future!
         </span>
       </div>
       <div className="attributes">

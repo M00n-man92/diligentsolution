@@ -1,9 +1,17 @@
 import React, { useState } from 'react'
 import Axios from "axios"
-import { Phone, Email, LocationOn } from '@mui/icons-material';
 import "./nine.scss";
 
+import {
+  TelegramShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton
+} from "react-share";
+
+
+import { Phone, Email, LocationOn, Telegram, Link, WhatsApp } from '@mui/icons-material';
 import TextField from "@mui/material/TextField";
+import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -14,10 +22,23 @@ import { Button } from '@mui/material';
 
 import { useQuery, useMutation } from "react-query";
 export default function Nine() {
+  /// first form
   const [age, setAge] = useState('');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+ 
+  //second form
+  const [commodity, setCommodity] = useState("");
+  const [otherAge, setOtherAge] = useState("");
+  const [quality, setQuality] = useState(0);
+  const [volume, setVolume] = useState(0);
+  const [unit, setUnit] = useState("");
+  const [price, setPrice] = useState(0);
+  const [destination, setDestination] = useState("")
+  const [reuirment, setRequirment] = useState("");
+  const [period, setPeriod] = useState("")
+
   const [success, setSuccess] = useState(false)
   const [know, setKnow] = useState("")
   const [error, setErrors] = useState(false)
@@ -38,29 +59,45 @@ export default function Nine() {
       // console.log(e);
     },
   });
-  
+
   const handleChange = async (e) => {
     e.preventDefault();
     console.log("hellow")
     const user = { name, email, message, age };
-    if (name.length > 1 && email.length > 1 && message.length > 1 ) {
+    if (name.length > 1 && email.length > 1 && message.length > 1) {
       mutate(user);
     } else {
       setErrors(true);
       setKnow("please make sure you've correctly filled the boxes'");
     }
- console.log(error,know)
+    console.log(error, know)
   };
   return (
     <div className='nine' id="contact us">
       <div className="first">
         <div className="wahid">
           <h2>
-            Your inquiry
+            Contact us
           </h2>
-          <span>
-            Fill up the for and our Team will get back to you withen 24 houres.
-          </span>
+          <div className="newone">
+            <div className="iconsline">
+              <WhatsappShareButton url={window.location.href} title="Diligent solutions" >
+                <WhatsApp className="socialicons" />
+              </WhatsappShareButton>
+            </div>
+            <div className="iconsline">
+              <WorkplaceShareButton url={window.location.href} title="Diligent solutions" >
+                <Link className="socialicons" />
+
+              </WorkplaceShareButton>
+            </div>
+            <div className="iconsline">
+              <TelegramShareButton url={window.location.href} title="Diligent solutions">
+                <Telegram className="socialicons" />
+              </TelegramShareButton>
+            </div>
+
+          </div>
 
         </div>
         <div className="duos">
@@ -74,13 +111,13 @@ export default function Nine() {
             <div className="image">
               <Email />
             </div>
-            <span>help@diligentradesolutions.com</span>
+            <span>contact@diligentts.com</span>
           </div>
           <div className="estenen">
             <div className="image">
               <LocationOn />
             </div>
-            <span>Addis Ababa, 05street 100</span>
+            <span>Bole, Addis Ababa, Ethiopia</span>
           </div>
 
 
@@ -89,15 +126,15 @@ export default function Nine() {
       </div>
       <div className="second">
         <div className="one">
-          
+
           <TextField className='texting' label="Name"
             onChange={(e) => setName(e.target.value)}
             fullWidth
-            type="text" 
-            required/>
+            type="text"
+            required />
         </div>
         <div className="one">
-          
+
           <TextField
             className='texting' label="Mail"
             onChange={(e) => setEmail(e.target.value)}
@@ -107,15 +144,15 @@ export default function Nine() {
           />
         </div>
         <div className="one">
-          
+
           <Box className="texting">
             <FormControl fullWidth>
               <InputLabel >Coffee Profile</InputLabel>
               <Select
-                
+
                 value={age}
                 label="Coffee Profile"
-                onChange={(e)=>setAge(e.target.value)}
+                onChange={(e) => setAge(e.target.value)}
                 required
               >
                 <MenuItem value="Djimmah">Djimmah</MenuItem>
@@ -131,13 +168,13 @@ export default function Nine() {
           </Box>
         </div>
         <div className="one">
-          
-          
-          <TextField 
+
+
+          <TextField
             className='texting' label="Message"
             onChange={(e) => setMessage(e.target.value)}
             fullWidth
-            type="email"
+            type="text"
             multiline
             rows={5}
             required
@@ -145,13 +182,145 @@ export default function Nine() {
         </div>
         <div className="two">
           <Button
-            onClick={(e)=>handleChange(e)}
+            onClick={(e) => handleChange(e)}
             type="submit"
             disabled={isLoading}
-            startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null} 
+            startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
           > Send</Button>
-          {error?<span style={{color: "red", marginLeft:40}}> {know}</span>:<span></span>}
+          {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
         </div>
+      </div>
+
+      {/* second form  */}
+
+
+      <div className="second">
+        <div className="one">
+
+          <Box className="texting">
+            <FormControl fullWidth>
+              <InputLabel >Commodity</InputLabel>
+              <Select
+
+                value={commodity}
+                label="Coffee Profile"
+                onChange={(e) => setCommodity(e.target.value)}
+                required
+              >
+                <MenuItem value="Green">Green</MenuItem>
+                <MenuItem value="Roasted">Roasted</MenuItem>
+
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
+        <div className="one">
+
+          <Box className="texting">
+            <FormControl fullWidth>
+              <InputLabel >Origin</InputLabel>
+              <Select
+
+                value={otherAge}
+                label="Coffee Profile"
+                onChange={(e) => setOtherAge(e.target.value)}
+                required
+              >
+                <MenuItem value="Djimmah">Djimmah</MenuItem>
+                <MenuItem value="Hrrar">Hrrar</MenuItem>
+                <MenuItem value="Limu">Limu</MenuItem>
+                <MenuItem value="Teppi">Teppi</MenuItem>
+                <MenuItem value="Gujji">Gujji</MenuItem>
+                <MenuItem value="Lekmpti">Lekmpti</MenuItem>
+                <MenuItem value="Sidamo">Sidamo</MenuItem>
+                <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
+        <div className="one">
+
+          <Box className="texting">
+            <FormControl fullWidth>
+              <InputLabel >Quality/Grade</InputLabel>
+              <Select
+
+                value={quality}
+                label="Coffee Profile"
+                onChange={(e) => setQuality(e.target.value)}
+                required
+              >
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2}>2</MenuItem>
+                <MenuItem value={3}>3</MenuItem>
+                <MenuItem value={4}>4</MenuItem>
+                <MenuItem value={5}>5</MenuItem>
+
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
+        <div className="one">
+
+          <TextField className='textingg' label="Volume"
+            onChange={(e) => setVolume(e.target.value)}
+            fullWidth
+            type="number"
+            required />
+          <TextField className='textingg' label="Unit"
+            onChange={(e) => setUnit(e.target.value)}
+            fullWidth
+            type="text"
+            required />
+        </div>
+
+        <div className="one">
+          <TextField
+            className='texting' label="Target Price"
+            onChange={(e) => setPrice(e.target.value)}
+            fullWidth
+            type="number"
+          />
+        </div>
+        <div className="one">
+          <TextField
+            className='texting' label="Destination"
+            onChange={(e) => setDestination(e.target.value)}
+            fullWidth
+            type="text"
+          />
+        </div>
+        <div className="one">
+          <TextField
+            id="date"
+            label="Prefered Shipment Period"
+            type="date"
+            defaultValue="2022-10-21"
+            sx={{ width: 220 }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            onChange={(e) => setPeriod(e.target.value)}
+          />
+        </div>
+        <div className="one">
+          <TextField
+            id="date"
+            label="Additional Requriments"
+            type="text"
+            onChange={(e) => setRequirment(e.target.value)}
+          />
+        </div>
+        <div className="two">
+          <Button
+            onClick={(e) => handleChange(e)}
+            type="submit"
+            disabled={isLoading}
+            startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
+          > Send</Button>
+          {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
+        </div>
+
       </div>
     </div>
   )

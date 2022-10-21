@@ -1,11 +1,10 @@
 import React from 'react'
 import "./eleven.scss";
-import {Link} from "react-router-dom";
 export default function Eleven() {
   return (
     <div className='eleven'>
       <span>
-      For your inconvenience, below are links to stalk holder of the Ethiopian coffee export market
+      For your inconvenience, below are links to stakeholder of the Ethiopian coffee export market.
       </span>
       <div className="linkes">
         <div className="single">

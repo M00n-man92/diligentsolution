@@ -6,16 +6,15 @@ export default function Second() {
     <div className='second'>
       <div className="one">
         <h3>
-        Ethiopia is where Coffee itself calls home!
+        Ethiopia: Where coffee and Mankind call home
         </h3>
       </div>
       <div className="two">
         <div className="wahid">
           <p>
-          The story is that a goat herder named Kaldi who noticed his goats behaving frantically having eating an identified fruit. Kaldi then took the ‘magic’ beans and presented it to the monks who threw it into the fireplace considering it of evil. By their condemnation of coffee the monks became the primary roasters!
-          </p>
-          <p>
-          The magnificent fragrance from its first roast was the monks began using the beans to hope longer and made, Kaffa, the region within the western side of Ethiopia, the explanation the beans became known us ‘Coffee’.
+          The story of a goat herder, Monk and erratic goats is quite infamous among coffee enthusiasts; perhaps as much as coffee itself.
+
+Since its discovery ages ago, Ethiopian Arabica Coffee has been beknown for its uniqueness.
           </p>
           <p>
           For many years, Ethiopia has provided a number of the world's best reviewed single origin premium coffee beans. In general, Ethiopian coffees are best known for his or her complexity with a pungent, winey quality and a definite wildness in their acidity.

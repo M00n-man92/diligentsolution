@@ -32,10 +32,7 @@ export default function Three() {
         </div>
         <div className="estnen">
           <p>
-          Ethiopia remains a specialty coffee industry darling for its incredible kind of flavors. Though fully traceability has been challenging in recent history, recent regulations have eased direct purchasing possible.
-          </p>
-          <p>
-          Ethiopia coffees, when made well, may be mind-alteringly complex and overwhelmingly fragrant. They taste become independent from all other countries and never convincingly interchangeable with the other washed or sun dried arabica on Earth. From Ethiopia’s landscape comes a number of the best-known descriptors within the coffee world that over time have come to point Ethiopia unmistakably (blueberry, jasmine, bergamot) and are considered worldwide benchmarks of flavor.
+          Ethiopian coffees, when made well, may be mind-alteringly complex and overwhelmingly fragrant. They taste become independent from all other countries and never convincingly interchangeable with the other washed or sun dried arabica on Earth. From Ethiopia’s landscape comes a number of the best-known descriptors within the coffee world that over time have come to point Ethiopia unmistakably (blueberry, jasmine, bergamot) and are considered worldwide benchmarks of flavor.
           </p>
         </div>
       </div>

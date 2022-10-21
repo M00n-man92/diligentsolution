@@ -4,8 +4,10 @@ import "./six.scss"
 import { useState } from 'react';
 import Eight from '../eighth/Eight';
 import { Modal } from '@mui/material';
-
+import { ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material'
 export default function Six() {
+  const h = window.innerHeight;
+  const w = window.innerWidth;
   const coffee = [
     {
       img: "./assets/IMG_3075 (2).JPG",
@@ -27,7 +29,7 @@ export default function Six() {
       Harvest: "October-January",
       Availability: "May-July",
       renown: "",
-      txt: "Hrrar"
+      txt: "Harrar"
     },
     {
       img: "",
@@ -96,6 +98,28 @@ export default function Six() {
       txt: "Yirgacheffee"
     }
   ]
+  const [itemm, setitemm] = useState(0)
+  const nion = (digits) => {
+    if(w>1000){
+      if (digits === "l") {
+        itemm !== 0 ? setitemm(itemm - 1) : setitemm(1)
+        // console.log(itemm)
+      }
+      else if (digits === "r") {
+        itemm !== 1 ? setitemm(itemm + 1) : setitemm(0)
+      }
+    }
+    else if (w<900){
+      if (digits === "l") {
+        itemm !== 0 ? setitemm(itemm - 1) : setitemm(3)
+        // console.log(itemm)
+      }
+      else if (digits === "r") {
+        itemm !== 3 ? setitemm(itemm + 1) : setitemm(0)
+      }
+    }
+    
+  }
   const [open, setOpen] = useState(false);
   const [obj, setObj] = useState({})
   const handler = (item) => {
@@ -105,25 +129,41 @@ export default function Six() {
 
   }
   return (
-    
+
     <div className='six' id="services">
       <div className="first">
         <div className="wahid">
           <h2>Coffee Profiles</h2>
         </div>
-        <div className="estenen">
-          {coffee.map((item, index) =>
-            <div className="somethin" key={index} onClick={() => handler(item)} >
+        <div className="nexttowahid">
+          <span>Ethiopian coffee profile for your enjoyment</span>
+        </div>
+        <div className="closertoestenn">
+           <div className="lightnigga">
+            <ArrowBackIosNewOutlined className='ion' onClick={() => nion("l")} />
+          </div> 
+          <div className="estenen">
+            <div className="keepmoving" style={{ transform: `translateX(${-50 * itemm}%)` }}>
+              {coffee.map((item, index) =>
+                <div className="somethin" key={index} onClick={() => handler(item)} >
 
-              <Seven image={item.img} title={item.txt} />
+                  <Seven image={item.img} title={item.txt} />
+                </div>
+              )}
             </div>
-          )}
-        </div>
-        <div className="thelasta">
-        <Eight isOpen={open} isSet={setOpen} isObj={setObj} neObj={obj}/>
+          </div>
+          <div className="darknigga">
+            {/* <img src="/assets/arrowr.png" alt="" /> */}
+
+            <ArrowForwardIosOutlined className='ion' onClick={() => nion("r")} />
+          </div>
         </div>
 
-        
+        <div className="thelasta">
+          <Eight isOpen={open} isSet={setOpen} isObj={setObj} neObj={obj} />
+        </div>
+
+
 
 
       </div>

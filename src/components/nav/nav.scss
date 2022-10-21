@@ -9,6 +9,7 @@
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
+  opacity: 0.5;
   // margin-top: 20px;
   justify-content: center;
   align-items: center;
@@ -38,6 +39,7 @@
       }
       a{
         cursor: pointer;
+        // color:white;
         color: #112d17;
         font-family: "Roboto-Bold";
         font-size: 19px;
@@ -51,6 +53,7 @@
   }
   
   .logo{
+    opacity: 3;
     flex: 1;
     margin-right: 20px;
     // background-color: red;

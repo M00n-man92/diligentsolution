@@ -27,17 +27,21 @@ export default function ({width,height}) {
       <div className="info">
         <div className="one">
           <span>
-            Ethiopia is where Coffee itself calls home!
+          We help you find the coffee you need, when and how you need it!
+
+Outstanding results, less worry!
+
+
           </span>
         </div>
         <div className="two">
           <span>
-          Coffee is native to southwestern Ethiopia, especially the Kaffa region.
+          We aid in easing your in finding the coffee you want in the time and price range you specify with significantly less headache!
           </span>
         </div>
         <div className="three">
           <a href="#contact us">
-          SUBMIT YOUR REQUEST
+          Submit Your Request Now!
           </a>
         </div>
       </div>
