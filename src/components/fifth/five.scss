@@ -23,7 +23,8 @@ max-width: 40em;
       
 
       h2{
-        color: #4A2C2A;
+        // color: #4A2C2A;
+        color:#112d17;
         font-size: 48px;
         font-family: "Roboto-Bold";
         @media (max-width: 40em) {
@@ -36,6 +37,7 @@ max-width: 40em;
     .wahid{
       margin-top: 3%;
       display: flex;
+      align-items: center;
       img{
         flex: 1;
         height: 300px;
@@ -55,8 +57,17 @@ max-width: 40em;
           margin-left: 2%;
           flex:2;
          }
-         
+         h4{
+          font-size: 28px;
+          font-family: "Roboto-Bold";
+          margin-bottom: 3%;
+          @media (max-width: 40em) {
+            font-size: 14px;
+           }
+         }
         p{
+          
+          margin-top: 2%;
           font-size: 20px;
           font-family: "Roboto-Regular";
           margin-bottom: 3%;

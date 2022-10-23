@@ -27,7 +27,7 @@ export default function Nine() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
- 
+
   //second form
   const [commodity, setCommodity] = useState("");
   const [otherAge, setOtherAge] = useState("");
@@ -39,9 +39,14 @@ export default function Nine() {
   const [reuirment, setRequirment] = useState("");
   const [period, setPeriod] = useState("")
 
+  // handeler variables
   const [success, setSuccess] = useState(false)
   const [know, setKnow] = useState("")
   const [error, setErrors] = useState(false)
+
+  //var to change the forms
+  const [change ,setChange] =useState(true);
+
   const send = async (user) => {
     const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
     return reply.data;
@@ -124,77 +129,91 @@ export default function Nine() {
         </div>
 
       </div>
-      <div className="second">
-        <div className="one">
+      {change ?
+        <div className="second">
+          <div className="postiton">
+            <Button 
+              className="button"
+              onClick={()=>setChange(!change)}>
+              {change? <span>Submit Request 2/2</span> : <span>Contact 1/2</span>}
+            </Button>
+          </div>
+          <div className="one">
 
-          <TextField className='texting' label="Name"
-            onChange={(e) => setName(e.target.value)}
-            fullWidth
-            type="text"
-            required />
+            <TextField className='texting' label="Name"
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              type="text"
+              required />
+          </div>
+          <div className="one">
+
+            <TextField
+              className='texting' label="Mail"
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              type="email"
+              required
+            />
+          </div>
+          <div className="one">
+
+            <Box className="texting">
+              <FormControl fullWidth>
+                <InputLabel >Coffee Profile</InputLabel>
+                <Select
+
+                  value={age}
+                  label="Coffee Profile"
+                  onChange={(e) => setAge(e.target.value)}
+                  required
+                >
+                  <MenuItem value="Djimmah">Djimmah</MenuItem>
+                  <MenuItem value="Hrrar">Hrrar</MenuItem>
+                  <MenuItem value="Limu">Limu</MenuItem>
+                  <MenuItem value="Teppi">Teppi</MenuItem>
+                  <MenuItem value="Gujji">Gujji</MenuItem>
+                  <MenuItem value="Lekmpti">Lekmpti</MenuItem>
+                  <MenuItem value="Sidamo">Sidamo</MenuItem>
+                  <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </div>
+          <div className="one">
+
+
+            <TextField
+              className='texting' label="Message"
+              onChange={(e) => setMessage(e.target.value)}
+              fullWidth
+              type="text"
+              multiline
+              rows={5}
+              required
+            />
+          </div>
+          <div className="two">
+            <Button
+              onClick={(e) => handleChange(e)}
+              type="submit"
+              disabled={isLoading}
+              startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
+            > Send</Button>
+            {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
+          </div>
         </div>
-        <div className="one">
+        
+        : 
 
-          <TextField
-            className='texting' label="Mail"
-            onChange={(e) => setEmail(e.target.value)}
-            fullWidth
-            type="email"
-            required
-          />
-        </div>
-        <div className="one">
-
-          <Box className="texting">
-            <FormControl fullWidth>
-              <InputLabel >Coffee Profile</InputLabel>
-              <Select
-
-                value={age}
-                label="Coffee Profile"
-                onChange={(e) => setAge(e.target.value)}
-                required
-              >
-                <MenuItem value="Djimmah">Djimmah</MenuItem>
-                <MenuItem value="Hrrar">Hrrar</MenuItem>
-                <MenuItem value="Limu">Limu</MenuItem>
-                <MenuItem value="Teppi">Teppi</MenuItem>
-                <MenuItem value="Gujji">Gujji</MenuItem>
-                <MenuItem value="Lekmpti">Lekmpti</MenuItem>
-                <MenuItem value="Sidamo">Sidamo</MenuItem>
-                <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
-        </div>
-        <div className="one">
-
-
-          <TextField
-            className='texting' label="Message"
-            onChange={(e) => setMessage(e.target.value)}
-            fullWidth
-            type="text"
-            multiline
-            rows={5}
-            required
-          />
-        </div>
-        <div className="two">
-          <Button
-            onClick={(e) => handleChange(e)}
-            type="submit"
-            disabled={isLoading}
-            startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
-          > Send</Button>
-          {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
-        </div>
-      </div>
-
-      {/* second form  */}
-
-
-      <div className="second">
+        <div className="second">
+        <div className="postiton">
+            <Button 
+              className="button"
+              onClick={()=>setChange(!change)}>
+              {change? <span>Submit Request 2/2</span> : <span>Contact 1/2</span>}
+            </Button>
+          </div>
         <div className="one">
 
           <Box className="texting">
@@ -322,6 +341,12 @@ export default function Nine() {
         </div>
 
       </div>
-    </div>
+}
+
+
+      {/* second form  */}
+
+
+          </div>
   )
 }

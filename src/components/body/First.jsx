@@ -9,7 +9,7 @@ export default function ({width,height}) {
     height = window.innerHeight;
 
   return (
-    <div className='body'>
+    <div className='body' id="home">
       <LazyLoadImage
         alt=""
         height={height}

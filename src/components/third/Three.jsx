@@ -32,7 +32,14 @@ export default function Three() {
         </div>
         <div className="estnen">
           <p>
-          Ethiopian coffees, when made well, may be mind-alteringly complex and overwhelmingly fragrant. They taste become independent from all other countries and never convincingly interchangeable with the other washed or sun dried arabica on Earth. From Ethiopia’s landscape comes a number of the best-known descriptors within the coffee world that over time have come to point Ethiopia unmistakably (blueberry, jasmine, bergamot) and are considered worldwide benchmarks of flavor.
+          A 15-year coffee development strategy was recently introduced by the Ethiopian Coffee and Tea Authority (ECTA), according to officials, and it will be crucial to optimizing the nation's coffee production capability.
+
+
+</p><p>
+The COVID-19 epidemic delayed the introduction of the plan, which was created in cooperation with the Ethiopian Institute of Agriculture Research (EIAR) and international NGO TechnoServe, by more than two years.
+It points out prospects along the entire coffee value chain to significantly enhance the nation's exports of high-quality, environmentally friendly coffee, boosting farmer incomes and generating jobs for millions of people.
+The Coffee strategy, which will be in effect until 2033, is built on six major pillars and intends to assist in the creation of a long-term, common vision among the sector's major players.
+These include processing, value-adding, marketing, value-added extension services, research, and sector strengthening.
           </p>
         </div>
       </div>

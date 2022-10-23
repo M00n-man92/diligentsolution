@@ -9,7 +9,10 @@
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
-  opacity: 0.5;
+  // opacity: 0.5;
+  background-color: rgb(37, 37, 37);
+  filter: brightness(70%);
+  // filter: brightness(40%);
   // margin-top: 20px;
   justify-content: center;
   align-items: center;
@@ -40,7 +43,7 @@
       a{
         cursor: pointer;
         // color:white;
-        color: #112d17;
+        color: white;
         font-family: "Roboto-Bold";
         font-size: 19px;
         text-decoration: none;

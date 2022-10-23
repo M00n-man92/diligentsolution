@@ -30,7 +30,10 @@ export default function Four() {
         </div>
         <div className="estnen">
           <p>
-            85% of the Ethiopian production is natural (sundried) processed coffee; the remaining 15% is washed. Ethiopia starts harvesting coffee in September/October in lowland regions, and by the tip of January, 95% of the crop should be harvested. Washed coffees are shipped from January onwards and naturals from late March.
+          The minimum coffee pricing directive was a new regulation that the Ethiopia Tea & Coffee Association issued to the market.
+The regulation requires Ethiopian coffee exporters to sell their product at a minimum price or more.
+The weekly minimum pricing is broken down by location, grade, and exporter type.
+
           </p>
         </div>
       </div>

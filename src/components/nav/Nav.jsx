@@ -8,12 +8,12 @@ export default function Nav() {
       </div>
       <div className="sec">
       <div className="first">
-        <a href='#about us' >
-         US
+        <a href='#home' >
+         About Us
         </a>
       </div>
       <div className="first">
-        <a>
+        <a href='#about us'>
           Our Principles
         </a>
       </div>
