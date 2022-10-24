@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Axios from "axios"
 import "./nine.scss";
 
@@ -46,17 +46,23 @@ export default function Nine() {
 
   //var to change the forms
   const [change ,setChange] =useState(true);
-
+  const [color, setColor] = useState("red");
   const send = async (user) => {
     const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
     return reply.data;
   };
-  const { mutate, isLoading } = useMutation(send, {
+   const anotherSend = async (user) =>{
+    const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+    return reply.data
+
+  } 
+  const { mutate, isLoading, isError, isIdle } = useMutation(send, {
     onSuccess: (data) => {
       setSuccess(true);
       setErrors(false)
-      // console.log(data);
-      setKnow("User created successfully.");
+      console.log(data);
+      setKnow("Message is sent successfully. We'll get back to you soon.");
+      setColor("green");
     },
     onError: (e) => {
       setErrors(true);
@@ -65,9 +71,30 @@ export default function Nine() {
     },
   });
 
+  // this is for the inquires form
+  const anotherHandleChange = (e) =>{
+    e.preventDefault();
+    const user = { 
+      commodity,
+      otherAge,
+      quality,
+      volume,
+      unit,
+      price,
+      destination,
+      reuirment,
+      period,
+    };
+    if (commodity.length > 1 && otherAge.length) {
+      mutate(user);
+    } else {
+      setErrors(true);
+      setKnow("please make sure you've correctly filled the boxes'");
+    }
+  }
+  // this is or the contact form
   const handleChange = async (e) => {
     e.preventDefault();
-    console.log("hellow")
     const user = { name, email, message, age };
     if (name.length > 1 && email.length > 1 && message.length > 1) {
       mutate(user);
@@ -75,8 +102,11 @@ export default function Nine() {
       setErrors(true);
       setKnow("please make sure you've correctly filled the boxes'");
     }
-    console.log(error, know)
   };
+  useEffect(()=>{
+    console.log(isLoading,isError,isIdle)
+  },[])
+  console.log(isLoading,isError)
   return (
     <div className='nine' id="contact us">
       <div className="first">
@@ -200,7 +230,7 @@ export default function Nine() {
               disabled={isLoading}
               startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
             > Send</Button>
-            {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
+            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span></span>}
           </div>
         </div>
         
@@ -283,11 +313,13 @@ export default function Nine() {
 
           <TextField className='textingg' label="Volume"
             onChange={(e) => setVolume(e.target.value)}
+            value={volume}
             fullWidth
             type="number"
             required />
           <TextField className='textingg' label="Unit"
             onChange={(e) => setUnit(e.target.value)}
+            value={unit}
             fullWidth
             type="text"
             required />
@@ -297,6 +329,7 @@ export default function Nine() {
           <TextField
             className='texting' label="Target Price"
             onChange={(e) => setPrice(e.target.value)}
+            value={price}
             fullWidth
             type="number"
           />
@@ -305,6 +338,7 @@ export default function Nine() {
           <TextField
             className='texting' label="Destination"
             onChange={(e) => setDestination(e.target.value)}
+            value={destination}
             fullWidth
             type="text"
           />
@@ -320,24 +354,25 @@ export default function Nine() {
               shrink: true,
             }}
             onChange={(e) => setPeriod(e.target.value)}
-          />
+            value={period}
+         />
         </div>
         <div className="one">
           <TextField
-            id="date"
             label="Additional Requriments"
             type="text"
             onChange={(e) => setRequirment(e.target.value)}
+            value={reuirment}
           />
         </div>
         <div className="two">
           <Button
-            onClick={(e) => handleChange(e)}
+            onClick={(e) => anotherHandleChange(e)}
             type="submit"
             disabled={isLoading}
             startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
           > Send</Button>
-          {error ? <span style={{ color: "red", marginLeft: 40 }}> {know}</span> : <span></span>}
+          {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span></span>}
         </div>
 
       </div>

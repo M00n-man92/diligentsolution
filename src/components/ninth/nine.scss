@@ -151,15 +151,21 @@
       }
     }
     .two {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 0%;
-      margin-left: 60%;
-      height: 40px;
+      // margin-left: 60%;
+      // height: 40px;
       @media (max-width: 40em) {
         margin-left: 30%;
         margin-top: 0%;
         // height: 30px;
       }
-
+      span{
+        font-size: 12px;
+        font-family: "Roboto-Bold";
+      }
       button {
         cursor: pointer;
         border-radius: 4px;

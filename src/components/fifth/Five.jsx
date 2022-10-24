@@ -45,6 +45,7 @@ export default function Five() {
 </h4>
 <p>
 You share with us the details of your request including:
+</p>
 <ul>
   <li>
   Origin
@@ -68,12 +69,12 @@ We will also coordinate with the exporters and facilitate the export process inc
 
 </p>
 
-            </p>
+  
             
           </div>
         </div>
       </div>
-      .
+      
     </div>
   )
 }
