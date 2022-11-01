@@ -5,7 +5,7 @@ import Three from "./components/third/Three";
 import Four from "./components/forth/Four";
 import Five from "./components/fifth/Five";
 import Six from "./components/sixth/Six";
-// import Nine from "./components/ninth/Nine";
+import Nine from "./components/ninth/Nine";
 import Ten from "./components/tenth/Ten"
 import "./spp.scss";
 import "./app.css";
@@ -29,7 +29,7 @@ const App = () => {
 
           <Six />
           <Eleven />
-          {/* <Nine /> */}
+          <Nine />
        </div>
       </div>
 

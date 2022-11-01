@@ -3,7 +3,7 @@ import "./first.scss";
 import { LazyLoadImage }
   from 'react-lazy-load-image-component';
 
-export default function ({width,height}) {
+export default function First ({width,height}) {
  
     width = window.innerWidth;
     height = window.innerHeight;

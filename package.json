@@ -21,7 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "engines": {
-    "node": "14 || 15 || 16",
+    "node": "16",
     "npm": ">=6"
   },
   "scripts": {

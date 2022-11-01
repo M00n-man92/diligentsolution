@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Axios from "axios"
 import "./nine.scss";
 
@@ -11,7 +11,6 @@ import {
 
 import { Phone, Email, LocationOn, Telegram, Link, WhatsApp } from '@mui/icons-material';
 import TextField from "@mui/material/TextField";
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -20,7 +19,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Select from '@mui/material/Select';
 import { Button } from '@mui/material';
 
-import { useQuery, useMutation } from "react-query";
+import { useMutation } from "react-query";
 export default function Nine() {
   /// first form
   const [age, setAge] = useState('');
@@ -40,7 +39,6 @@ export default function Nine() {
   const [period, setPeriod] = useState("")
 
   // handeler variables
-  const [success, setSuccess] = useState(false)
   const [know, setKnow] = useState("")
   const [error, setErrors] = useState(false)
 
@@ -53,14 +51,9 @@ export default function Nine() {
 
     return reply.data;
   };
-  const anotherSend = async (user) => {
-    const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
-    return reply.data
-
-  }
-  const { mutate, isLoading, isError, isIdle } = useMutation(send, {
+  
+  const { mutate, isLoading } = useMutation(send, {
     onSuccess: (data) => {
-      setSuccess(true);
       setErrors(false)
       console.log(data);
       setKnow("Message is sent successfully. We'll get back to you soon.");
@@ -72,32 +65,12 @@ export default function Nine() {
       console.log(e);
     },
   });
-  useEffect(()=>{},[know])
+  
   // this is for the inquires form
-  const anotherHandleChange = (e) => {
-    e.preventDefault();
-    const user = {
-      commodity,
-      otherAge,
-      quality,
-      volume,
-      unit,
-      price,
-      destination,
-      reuirment,
-      period,
-    };
-    if (commodity.length > 1 && otherAge.length) {
-      mutate(user);
-    } else {
-      setErrors(true);
-      setKnow("please make sure you've correctly filled the boxes'");
-    }
-  }
+  
   // this is or the contact form
   const handleChange = async (e) => {
     e.preventDefault();
-    setSuccess(false);
     setErrors(false);
     setKnow("");
     setColor("");

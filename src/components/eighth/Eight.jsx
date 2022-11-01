@@ -1,15 +1,7 @@
 import React from 'react'
-import { Modal } from '@mui/material';
 
 export default function Eight({ isOpen, isSet, isObj, neObj }) {
   return (
-  
-    // <Modal
-    //       hideBackdrop
-    //       open={isOpen}
-    //       onClose={() => isSet(!isOpen)}
-
-    //     >
       <div className={'eight ' + (isOpen && "active")}>
         <div className="first">
           <div className="wahid">
@@ -81,8 +73,5 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
           </div>
         </div>
       </div>
-    //  </Modal>
-
-
   )
 }

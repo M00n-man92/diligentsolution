@@ -3,11 +3,9 @@ import Seven from '../seveth/Seven'
 import "./six.scss"
 import { useState } from 'react';
 import Eight from '../eighth/Eight';
-import { Modal } from '@mui/material';
 import { ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material'
 import { coffee } from "../../data";
 export default function Six() {
-  const h = window.innerHeight;
   const w = window.innerWidth;
   const [size, setSize] = useState(60);
   const [itemm, setitemm] = useState(0)
