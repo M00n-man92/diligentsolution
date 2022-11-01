@@ -375,7 +375,7 @@ export default function Nine() {
             </div>
             <div className="two">
               <Button
-                onClick={(e) => anotherHandleChange(e)}
+                onClick={(e) => console.log(message,email,name)}
                 type="submit"
                 disabled={isLoading}
                 startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
