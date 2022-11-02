@@ -46,8 +46,8 @@ export default function Nine() {
   const [change, setChange] = useState(true);
   const [color, setColor] = useState("red");
   const send = async (user) => {
-    // const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
-    const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
+    const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+    // const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
 
     return reply.data;
   };
@@ -329,7 +329,7 @@ export default function Nine() {
                 id="date"
                 label="Prefered Shipment Period"
                 type="date"
-                defaultValue="2022-10-21"
+                // defaultValue="2022-10-21"
                 sx={{ width: 220 }}
                 InputLabelProps={{
                   shrink: true,

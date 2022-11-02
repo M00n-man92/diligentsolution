@@ -22,8 +22,8 @@ export default function Ten() {
         alt=""
         width={width }
         height={height }
-        // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6166.JPG?alt=media&token=3d47a4c2-43d3-4d1c-8462-67c9972fef79" // use normal <img> attributes as prop
-        src= "./assets/IMG_6166.JPG"
+        src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6166.JPG?alt=media&token=3d47a4c2-43d3-4d1c-8462-67c9972fef79" // use normal <img> attributes as prop
+        // src= "./assets/IMG_6166.JPG"
         placeholderSrc="./assets/diligent.png"
         effect='blur'
         // className='img'
