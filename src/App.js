@@ -7,7 +7,7 @@ import Five from "./components/fifth/Five";
 import Six from "./components/sixth/Six";
 import Nine from "./components/ninth/Nine";
 import Ten from "./components/tenth/Ten"
-import "./spp.scss";
+// import "./spp.scss";
 import "./app.css";
 import Eleven from "./components/elventh/Eleven";
 const App = () => {
