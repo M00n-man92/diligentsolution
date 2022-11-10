@@ -22,8 +22,8 @@ export default function Three() {
             alt=""
             width={width}
             height={height}
-            // src="./assets/IMG_6176.JPG"
-            src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6176.JPG?alt=media&token=5f501e7b-dbe2-4537-b2c2-4b1cb5e15d36" // use normal <img> attributes as prop
+            src="./assets/IMG_6176.JPG"
+            // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6176.JPG?alt=media&token=5f501e7b-dbe2-4537-b2c2-4b1cb5e15d36" // use normal <img> attributes as prop
             placeholderSrc="./assets/diligent.png"
             effect='blur'
           // className='img'

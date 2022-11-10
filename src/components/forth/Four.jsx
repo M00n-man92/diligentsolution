@@ -20,8 +20,8 @@ export default function Four() {
             alt=""
             width={width}
             height={height}
-            // src="./assets/IMG_3027 (3).JPG"
-            src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3027%20(3).JPG?alt=media&token=e0bbd2fe-6465-4c15-b9c5-5da84f083471" // use normal <img> attributes as prop
+            src="./assets/IMG_3027 (3).JPG"
+            // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3027%20(3).JPG?alt=media&token=e0bbd2fe-6465-4c15-b9c5-5da84f083471" // use normal <img> attributes as prop
             placeholderSrc="./assets/diligent.png"
             effect='blur'
           // className='img'
