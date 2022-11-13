@@ -8,23 +8,23 @@ export default function Nav() {
       </div>
       <div className="sec">
       <div className="first">
-        <a href='#home' >
+        <a href='#home' onClick={(e)=>{console.log("")}}>
          About Us
         </a>
       </div>
       <div className="first">
-        <a href='#about us'>
+        <a href='#about us' onClick={(e)=>{console.log("")}}>
           Our Principles
         </a>
       </div>
       
       <div className="first">
-      <a href='#services'>
+      <a href='#services' onClick={(e)=>{console.log("")}}>
           Our Services
         </a>
       </div>
-      <div className="first">
-        <a href='#contact us'>
+      <div className="first" onClick={(e)=>{console.log("")}}>
+        <a href='#contact us' >
           Contact Us
         </a>
       </div>

@@ -28,12 +28,15 @@
   .sec{
     display: flex;
     flex:1;
+    // cursor: pointer;
+    // background-color: red;
     @media (max-width: 40em) {
       
       flex: 1;
     }
     .first{
       margin-right: 20px;
+      // cursor: pointer;
       
       @media (max-width: 40em) {
         padding-left: 1%;
@@ -41,9 +44,10 @@
         margin-right: 0px;
       }
       a{
+        // color: red;
         cursor: pointer;
-        // color:white;
-        color: white;
+        color:white;
+        // color: white;
         font-family: "Roboto-Bold";
         font-size: 19px;
         text-decoration: none;
