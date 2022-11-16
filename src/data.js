@@ -94,3 +94,11 @@ export const coffee = [
     txt: "Yirgacheffee"
   }
 ]
+export const imagedata = [
+  "./assets/IMG_3035 (2).JPG",
+  "./assets/20221008_135613-min.jpg",
+  "./assets/20221008_165143-min.jpg",
+  "./assets/20221008_165233-min.jpg",
+  "./assets/20221008_165821-min.jpg",
+
+]

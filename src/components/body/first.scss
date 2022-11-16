@@ -12,21 +12,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   // justify-content: center;
   @media (max-width: 40em) {
     height: 300px;
    }
-   
-  img{
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    filter: brightness(50%);
-    @media (max-width: 40em) {
+   .swinger{
+    width: 100%;
+    // overflow-x: hidden;
+    height: inherit;
+    @media (max-width:40em) {
       
-     }
-     
-  }
+    }
+    .keeponmoving{
+      transition      : all 1.5s ease-in-out;
+height: 100%;
+      width: 400%;
+      display: flex;
+      img{
+        height: 110%;
+
+        object-fit: cover;
+        z-index: 1;
+        filter: brightness(50%);
+        @media (max-width: 40em) {
+
+          // width: 100%;
+          // object-fit: contain;
+         }
+         
+      }
+      // background-color: red;
+    }
+   }
+  
   .info{
     z-index: 2;
     // top: 40px;
@@ -56,7 +75,7 @@
         color: white;
         // color: black;
         font-family: "Roboto-Bold";
-        font-size: 56px;
+        font-size: 48px;
         @media (max-width: 40em) {
           font-size: 20px;
          }
@@ -65,7 +84,7 @@
     }
     .two{
       margin-left: 10%;
-      margin-top: 1%;
+      margin-top: 3%;
       width: 38%;
       @media (max-width: 40em) {
         margin-top: 4%;
@@ -87,8 +106,8 @@
     .three{
       margin-left: 10%;
       margin-top: 3%;
-      width: 220px;
-        height: 42px;
+      width: 250px;
+        height: 52px;
         background-color: #112D17;
         display: flex;
         align-items: center;

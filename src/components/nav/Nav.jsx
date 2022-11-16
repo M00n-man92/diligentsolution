@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <div className='nav'>
       <div className="logo">
-       <img src="./assets/logo1.PNG" alt="" />
+       <img src="./assets/Artboard 1@4x.png" alt="" />
       </div>
       <div className="sec">
       <div className="first">

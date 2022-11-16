@@ -8,13 +8,13 @@ export default function Eleven() {
       </span>
       <div className="linkes">
         <div className="single">
-        <a href=" " target="_blank" rel="noopener noreferrer">
+        <a href="https://ethiocta.gov.et/" target="_blank" rel="noopener noreferrer">
         <img src="./assets/download.png" alt="" />
         </a>
 
         </div>
         <div className="single">
-          <a href="https://ethiopiancoffeeguide.com/"target="_blank" rel="noopener noreferrer">
+          <a href="https://www.moi.gov.et/"target="_blank" rel="noopener noreferrer">
             <img src="./assets/trade.jpg" alt="" />
           </a>
         </div>

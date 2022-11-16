@@ -37,7 +37,7 @@ max-width: 40em;
     .wahid{
       margin-top: 3%;
       display: flex;
-      align-items: center;
+      // align-items: center;
       img{
         flex: 1;
         height: 300px;
@@ -53,6 +53,7 @@ max-width: 40em;
         display: flex;
         flex-direction: column;
         margin-left: 1%;
+        margin-top: -2%;
         @media (max-width: 40em) {
           margin-left: 2%;
           flex:2;
@@ -67,10 +68,10 @@ max-width: 40em;
          }
         p{
           
-          margin-top: 2%;
+          // margin-top: 2%;
           font-size: 20px;
           font-family: "Roboto-Regular";
-          margin-bottom: 3%;
+          margin-bottom: 0%;
           @media (max-width: 40em) {
             font-size: 12px;
            }

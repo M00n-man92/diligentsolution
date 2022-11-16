@@ -10,7 +10,7 @@
   padding-left: 10%;
   padding-right: 10%;
   // opacity: 0.5;
-  background-color: rgb(37, 37, 37);
+  // background-color: rgb(31, 30, 30);
   filter: brightness(70%);
   // filter: brightness(40%);
   // margin-top: 20px;
@@ -36,8 +36,13 @@
     }
     .first{
       margin-right: 20px;
-      // cursor: pointer;
-      
+      cursor: pointer;
+      // background-color: red;
+      display: flex;
+      align-items: center;
+
+      justify-content: center;
+      width: 100%;
       @media (max-width: 40em) {
         padding-left: 1%;
         padding-right: 1%;
@@ -46,7 +51,7 @@
       a{
         // color: red;
         cursor: pointer;
-        color:white;
+        color:rgb(255, 255, 255);
         // color: white;
         font-family: "Roboto-Bold";
         font-size: 19px;
@@ -64,9 +69,9 @@
     flex: 1;
     margin-right: 20px;
     // background-color: red;
-    display: flex;
+    // display: flex;
     // justify-content: center;
-    align-items: center;
+    // align-items: center;
     // background-color: red;
     @media (max-width: 40em) {
       flex: 0.5;
@@ -75,9 +80,9 @@
      }
      
     img{
-      height: 100%;
-      width: 30%;
-      object-fit: contain;
+     width: 200px;
+     height: 40px;
+      object-fit: cover;
       @media (max-width: 40em) {
         width: 80%;
        }

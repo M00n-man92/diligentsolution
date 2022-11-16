@@ -1,24 +1,61 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import "./first.scss";
 import { LazyLoadImage }
   from 'react-lazy-load-image-component';
+import { imagedata } from "../../data";
 
-export default function First ({width,height}) {
- 
-    width = window.innerWidth;
-    height = window.innerHeight;
+export default function First({ width, height }) {
+  const [itemm,setitemm]=useState(0)
+  const [sizeing, setSizing] = useState(25.4);
+  const autoPlay = useRef()
+    useEffect(() => {
+        autoPlay.current = heandler
+        
+    })
+    // setInterval(()=>heandler("r"),8000)
+    useEffect(() => {
+        const andle = () => {
+            autoPlay.current()
+        }
+        if(width<900){
 
+          setSizing(40);
+        }
+        // andle()
+        const interval = setInterval(andle, 4000)
+
+    }, [])
+    
+  const heandler = () => {
+
+    // else if (digits == "r") {
+    itemm != 4 ? setitemm(itemm + 1) : setitemm(0)
+    // console.log(itemm)
+    // }
+}
+  width = window.innerWidth;
+  height = window.innerHeight;
+  
   return (
     <div className='body' id="home">
-      <LazyLoadImage
-        alt=""
-        height={height}
-        // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3035%20(2).JPG?alt=media&token=a32cf229-b783-42df-a803-8570e4a76d2d" // use normal <img> attributes as props
-        src="./assets/IMG_3035 (2).JPG"
-        width={width} 
-        placeholderSrc="./assets/diligent.png"
-        effect='blur'
-     />
+      <div className="swinger">
+        <div className="keeponmoving" style={{ transform: `translateX(${-sizeing * itemm}%)` }}>
+          {imagedata.map((item,index)=>(
+            <LazyLoadImage
+            alt=""
+            height={height}
+            // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3035%20(2).JPG?alt=media&token=a32cf229-b783-42df-a803-8570e4a76d2d" // use normal <img> attributes as props
+            src={item}
+            width={width}
+            placeholderSrc="./assets/diligent.png"
+            effect='blur'
+            className='img'
+          />
+          ))}
+          
+        </div>
+      </div>
+
       {/* <img
         src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3035%20(2).JPG?alt=media&token=a32cf229-b783-42df-a803-8570e4a76d2d"
         alt=""
@@ -27,21 +64,21 @@ export default function First ({width,height}) {
       <div className="info">
         <div className="one">
           <span>
-          We help you find the coffee you need, when and how you need it!
+            We help you find the coffee you need, when and how you need it!
 
-Outstanding results, less worry!
+            Outstanding results, less worry!
 
 
           </span>
         </div>
         <div className="two">
           <span>
-          We aid in easing your in finding the coffee you want in the time and price range you specify with significantly less headache!
+            We aid in easing your in finding the coffee you want in the time and price range you specify with significantly less headache!
           </span>
         </div>
         <div className="three">
           <a href="#contact us">
-          Submit Your Request Now!
+            Submit Your Request Now!
           </a>
         </div>
       </div>

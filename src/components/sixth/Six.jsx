@@ -1,14 +1,43 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Seven from '../seveth/Seven'
 import "./six.scss"
-import { useState } from 'react';
 import Eight from '../eighth/Eight';
 import { ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material'
 import { coffee } from "../../data";
 export default function Six() {
   const w = window.innerWidth;
   const [size, setSize] = useState(60);
-  const [itemm, setitemm] = useState(0)
+  const [itemm,setitemm]=useState(0)
+  const [sizeing, setSizing] = useState(25.4);
+  const autoPlay = useRef()
+    useEffect(() => {
+        autoPlay.current = heandler
+        
+    })
+    // setInterval(()=>heandler("r"),8000)
+    useEffect(() => {
+        const andle = () => {
+            autoPlay.current()
+        }
+        
+        // andle()
+        const interval = setInterval(andle, 4000)
+
+    }, [])
+    
+  const heandler = () => {
+
+    // else if (digits == "r") {
+      if(w<900){
+        itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
+      }
+      else{
+        itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+      }
+    
+    // console.log(itemm)
+    // }
+}
   const nion = (digits) => {
     if(w>1000){
       setSize(60);

@@ -24,7 +24,7 @@ export default function Second() {
           </p>
         </div>
         <div className="duos">
-          <img src="" alt="" />
+          <img src="./assets/20221008_170656-min.jpg" alt="" />
         </div>
       </div>
     </div>
