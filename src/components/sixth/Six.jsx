@@ -8,7 +8,6 @@ export default function Six() {
   const w = window.innerWidth;
   const [size, setSize] = useState(60);
   const [itemm,setitemm]=useState(0)
-  const [sizeing, setSizing] = useState(25.4);
   const autoPlay = useRef()
     useEffect(() => {
         autoPlay.current = heandler
@@ -21,7 +20,7 @@ export default function Six() {
         }
         
         // andle()
-        const interval = setInterval(andle, 4000)
+        setInterval(andle, 4000)
 
     }, [])
     
@@ -29,10 +28,10 @@ export default function Six() {
 
     // else if (digits == "r") {
       if(w<900){
-        itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
+        itemm !== 2 ? setitemm(itemm + 1) : setitemm(0)
       }
       else{
-        itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+        itemm !== 1 ? setitemm(itemm + 1) : setitemm(0)
       }
     
     // console.log(itemm)

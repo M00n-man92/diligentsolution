@@ -4,37 +4,36 @@ import { LazyLoadImage }
   from 'react-lazy-load-image-component';
 import { imagedata } from "../../data";
 
-export default function First({ width, height }) {
+export default function First() {
   const [itemm,setitemm]=useState(0)
   const [sizeing, setSizing] = useState(25.4);
   const autoPlay = useRef()
-    useEffect(() => {
+  const width = window.innerWidth;
+  const height = window.innerHeight;  
+  useEffect(() => {
         autoPlay.current = heandler
-        
     })
     // setInterval(()=>heandler("r"),8000)
     useEffect(() => {
         const andle = () => {
             autoPlay.current()
         }
-        if(width<900){
-
-          setSizing(40);
-        }
         // andle()
-        const interval = setInterval(andle, 4000)
+        setInterval(andle, 4000)
 
     }, [])
     
   const heandler = () => {
+    if(width<900){
 
+      setSizing(40);
+    }
     // else if (digits == "r") {
-    itemm != 4 ? setitemm(itemm + 1) : setitemm(0)
+    itemm !== 4 ? setitemm(itemm + 1) : setitemm(0)
     // console.log(itemm)
     // }
 }
-  width = window.innerWidth;
-  height = window.innerHeight;
+
   
   return (
     <div className='body' id="home">
