@@ -117,18 +117,18 @@ export default function Nine() {
         </div>
         <div className="newone">
           <div className="iconsline">
-            <WhatsappShareButton url={window.location.href} title="Diligent solutions" >
+            <WhatsappShareButton url={window.location.href} title="Diligent Trade Solutions" >
               <WhatsApp className="socialicons" />
             </WhatsappShareButton>
           </div>
           <div className="iconsline">
-            <WorkplaceShareButton url={window.location.href} title="Diligent solutions" >
+            <WorkplaceShareButton url={window.location.href} title="Diligent Trade Solutions" >
               <Link className="socialicons" />
 
             </WorkplaceShareButton>
           </div>
           <div className="iconsline">
-            <TelegramShareButton url={window.location.href} title="Diligent solutions">
+            <TelegramShareButton url={window.location.href} title="Diligent Trade Solutions">
               <Telegram className="socialicons" />
             </TelegramShareButton>
           </div>
