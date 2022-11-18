@@ -40,7 +40,7 @@
     width: 50%;
     position: relative;
     z-index: 2;
-    top: -480px;
+    top: -400px;
     left: 100px;
     // margin-top: 3%;
     display: flex;
@@ -50,7 +50,7 @@
     margin-left: 16%;
     margin-right: 3%;
     @media (max-width: 40em) {
-      top: -400px;
+      top: -350px;
       left: 0px;
       font-size: 12px;
       width: 70%;
@@ -60,7 +60,7 @@
     h2{
         color: white;
         font-size: 48px;
-        font-family: "Roboto-Bold";
+        font-family: "Aaargh";
         @media (max-width: 40em) {
           font-size: 22px;
          }
@@ -70,7 +70,7 @@
 
       // margin-top: 1%;
       font-size: 20px;
-          font-family: "Roboto-Regular";
+          // font-family: "Roboto-Regular";
           text-align: center;
           color:white;
           @media (max-width: 40em) {
@@ -85,7 +85,7 @@
     position: relative;
     z-index: 2;
     left: 100px;
-    top: -620px;
+    top: -520px;
     margin-top: 15%;
     display: flex;
     align-items: center;
@@ -94,10 +94,10 @@
     margin-left: 9%;
     margin-right: 5%;
     @media (max-width: 40em) {
-      top: -450px;
-      left: 0px;
+      top: -380px;
+      left: -10px;
       // margin-top: 30%;
-      width: 90%;
+      width: 100%;
       margin-left: 3%;
       // background-color: red;
      }
@@ -133,7 +133,7 @@
       h2{
         color: white;
         font-size: 20px;
-        font-family: "Roboto-Bold";
+        font-family: "Aaargh";
         margin-bottom: 5%;
         @media (max-width: 40em) {
           font-size: 18px;
@@ -144,7 +144,7 @@
         color: white;
         margin-bottom: 3%;
         font-size: 18px;
-        font-family: "Roboto-Thin";
+        // font-family: "Roboto-Thin";
         text-align: center;
         @media (max-width: 40em) {
           font-size: 12px;

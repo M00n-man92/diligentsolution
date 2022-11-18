@@ -5,6 +5,14 @@
   font-weight: bold;
 }
 @font-face {
+  src: local("Aaargh"), url("./fonts/Aaargh.ttf");
+  font-family: "Aaargh";
+}
+@font-face {
+  src: local("SansSerifFLF"), url("./fonts/SansSerifFLF.otf");
+  font-family: "SansSerifFLF";
+}
+@font-face {
   src: local("Roboto-Thin"), url("./fonts/Roboto-Thin.ttf");
   font-family: "Roboto-Thin";
 }

@@ -74,8 +74,9 @@ height: 100%;
       span{
         color: white;
         // color: black;
-        font-family: "Roboto-Bold";
+        font-family: "Aaargh";
         font-size: 48px;
+        font-weight: 500;
         @media (max-width: 40em) {
           font-size: 20px;
          }
@@ -94,7 +95,7 @@ height: 100%;
        
       span{
         color: white;
-        font-family: "Roboto-Regular";
+        // font-family: "Roboto-Regular";
         font-size: 19px;
         @media (max-width: 40em) {
           font-size: 11px;
@@ -123,11 +124,12 @@ height: 100%;
         
         color: white;
         font-size: 18px;
-        font-family: "Roboto-Bold";
+        font-family: "Aaargh";
         border: none;
         border-radius: 7px;
         cursor: pointer;
         @media (max-width: 40em) {
+          text-align: center;
           font-size: 12px;
          }
          

@@ -56,7 +56,7 @@ export default function Nine() {
     onSuccess: (data) => {
       setErrors(false)
       console.log(data);
-      setKnow("Message is sent successfully. We'll get back to you soon.");
+      setKnow(data.msg);
       setColor("green");
     },
     onError: (e) => {
