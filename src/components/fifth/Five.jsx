@@ -28,7 +28,7 @@ export default function Five() {
             alt=""
             width={width}
             height={height}
-            src="./assets\Amaro Gayo.jfif"
+            src="./assets/Amaro Gayo.jfif"
             // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FAmaro%20Gayo.jfif?alt=media&token=a6882fa9-7c90-4fbb-94c8-0c14d9f4003b" // use normal <img> attributes as prop
             placeholderSrc="./assets/diligent.png"
             effect='blur'
@@ -39,10 +39,10 @@ export default function Five() {
             <p>
               Simply put, we get you the coffee you need: type, price range, and shipment schedule.
             </p>
-            <h4>
+            <p>
               How does it work?
 
-            </h4>
+            </p>
             <p>
               You share with us the details of your request including:
             </p>

@@ -86,9 +86,14 @@
         display: flex;
         width: 100%;
         // flex-wrap: wrap;
-        
-        overflow-x: hidden;
-        @media (max-width:40em) {
+
+        overflow-x: scroll;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        overflow-y: hidden;
+        @media (max-width: 40em) {
           height: 200px;
         }
         .keepmoving {

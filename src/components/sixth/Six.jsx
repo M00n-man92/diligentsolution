@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Seven from '../seveth/Seven'
 import "./six.scss"
 import Eight from '../eighth/Eight';
@@ -8,35 +8,7 @@ export default function Six() {
   const w = window.innerWidth;
   const [size, setSize] = useState(60);
   const [itemm,setitemm]=useState(0)
-  const autoPlay = useRef()
-    useEffect(() => {
-        autoPlay.current = heandler
-        
-    })
-    // setInterval(()=>heandler("r"),8000)
-    useEffect(() => {
-        const andle = () => {
-            autoPlay.current()
-        }
-        
-        // andle()
-        setInterval(andle, 4000)
-
-    }, [])
-    
-  const heandler = () => {
-
-    // else if (digits == "r") {
-      if(w<900){
-        itemm !== 2 ? setitemm(itemm + 1) : setitemm(0)
-      }
-      else{
-        itemm !== 1 ? setitemm(itemm + 1) : setitemm(0)
-      }
-    
-    // console.log(itemm)
-    // }
-}
+  
   const nion = (digits) => {
     if(w>1000){
       setSize(60);

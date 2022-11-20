@@ -2,14 +2,7 @@ import React, { useState } from 'react'
 import Axios from "axios"
 import "./nine.scss";
 
-import {
-  TelegramShareButton,
-  WhatsappShareButton,
-  WorkplaceShareButton
-} from "react-share";
-
-
-import { Phone, Email, LocationOn, Telegram, Link, WhatsApp } from '@mui/icons-material';
+import { Phone, Email, LocationOn, Telegram, Link, WhatsApp, LinkedIn, Facebook } from '@mui/icons-material';
 import TextField from "@mui/material/TextField";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
@@ -46,7 +39,14 @@ export default function Nine() {
   const [change, setChange] = useState(false);
   const [color, setColor] = useState("red");
   const send = async (user) => {
-    const reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+    let reply
+    if(change){
+      reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+    }
+    else{
+      reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/anothercoffee", user);
+    }
+    
     // const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
 
     return reply.data;
@@ -74,13 +74,36 @@ export default function Nine() {
     setErrors(false);
     setKnow("");
     setColor("");
-    const user = { name, email, message, age };
-    if (name.length > 1 && email.length > 1 && message.length > 1) {
-      mutate(user);
-    } else {
-      setErrors(true);
-      setColor("red")
-      setKnow("please make sure you've correctly filled the boxes'");
+    if (change) {
+      const user = { name, email, message, age };
+      if (name.length > 1 && email.length > 1 && message.length > 1) {
+        mutate(user);
+      } else {
+        setErrors(true);
+        setColor("red")
+        setKnow("please make sure you've correctly filled the boxes'");
+      }
+    }
+    else if (!change) {
+      const user = {
+        name,
+        commodity,
+        otherAge,
+        quality,
+        volume,
+        unit,
+        price,
+        destination,
+        reuirment,
+        period
+      };
+      if (name.length > 1 ) {
+        mutate(user);
+      } else {
+        setErrors(true);
+        setColor("red")
+        setKnow("please make sure you've given us your company name'");
+      }
     }
   };
 
@@ -100,6 +123,34 @@ export default function Nine() {
             </div>
             <span>+251 97 508 1993</span>
           </div>
+          <div className="newone">
+            <div className="iconsline">
+              <a href="/">
+                <WhatsApp className="socialicons" />
+              </a>
+            </div>
+            <div className="iconsline">
+              <a href="/">
+                <LinkedIn className="socialicons" />
+              </a>
+            </div>
+            <div className="iconsline">
+              <a href="/">
+                <Facebook className="socialicons" />
+              </a>
+            </div>
+            <div className="iconsline">
+              <a href="/">
+                <Link className="socialicons" />
+              </a>
+            </div>
+            <div className="iconsline">
+              <a href="/">
+                <Telegram className="socialicons" />
+              </a>
+            </div>
+
+          </div>
           <div className="estenen">
             <div className="image">
               <Email />
@@ -115,25 +166,7 @@ export default function Nine() {
 
 
         </div>
-        <div className="newone">
-          <div className="iconsline">
-            <WhatsappShareButton url={window.location.href} title="Diligent Trade Solutions" >
-              <WhatsApp className="socialicons" />
-            </WhatsappShareButton>
-          </div>
-          <div className="iconsline">
-            <WorkplaceShareButton url={window.location.href} title="Diligent Trade Solutions" >
-              <Link className="socialicons" />
 
-            </WorkplaceShareButton>
-          </div>
-          <div className="iconsline">
-            <TelegramShareButton url={window.location.href} title="Diligent Trade Solutions">
-              <Telegram className="socialicons" />
-            </TelegramShareButton>
-          </div>
-
-        </div>
 
 
       </div>
@@ -142,16 +175,16 @@ export default function Nine() {
 
         <div className="second">
           <div className="postiton">
-            
+
             <Button
               className="button"
               onClick={() => setChange(!change)}>
-              1. Contact Us
+               Contact Us
             </Button>
             <Button
               className="button"
               onClick={() => setChange(!change)}>
-              2. Submit Request
+               Submit Request
             </Button>
           </div>
           <div className="one">
@@ -225,21 +258,21 @@ export default function Nine() {
 
         <div className="second">
           <div className="postiton">
-          
-          <Button
+
+            <Button
               className="button"
               onClick={() => setChange(!change)}>
-              1. Submit Request
+               Submit Request
             </Button>
             <Button
               className="button"
               onClick={() => setChange(!change)}>
-              2. Contact Us
+               Contact Us
             </Button>
-            
+
           </div>
           <div className="one">
-            <TextField className='texting' label="Comapny Name"
+            <TextField className='texting' label="Company Name"
               onChange={(e) => setName(e.target.value)}
               fullWidth
               type="text"

@@ -9,23 +9,29 @@ export default function Nav() {
       <div className="sec">
       <div className="first">
         <a href='#home' onClick={(e)=>{console.log("")}}>
-         About Us
+         <b>About Us</b>
+         
         </a>
       </div>
       <div className="first">
         <a href='#about us' onClick={(e)=>{console.log("")}}>
-          Our Principles
+          <b>Our Principles</b>
+          
         </a>
       </div>
       
       <div className="first">
       <a href='#services' onClick={(e)=>{console.log("")}}>
-          Our Services
+         <b>Our Services</b>
+          
         </a>
       </div>
       <div className="first" onClick={(e)=>{console.log("")}}>
         <a href='#contact us' >
+          <b>
           Contact Us
+          </b>
+          
         </a>
       </div>
       </div>

@@ -84,14 +84,14 @@
   .attributes{
     position: relative;
     z-index: 2;
-    left: 100px;
+    left: 50px;
     top: -520px;
     margin-top: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    margin-left: 9%;
+    width: 100%;
+    // margin-left: -10%;
     margin-right: 5%;
     @media (max-width: 40em) {
       top: -380px;

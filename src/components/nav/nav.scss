@@ -6,12 +6,13 @@
 }
 .nav{
   scroll-behavior: smooth;
+  
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
   // opacity: 0.5;
-  background-color: rgb(197, 197, 197);
-  filter: brightness(70%);
+  background-color: white;
+  // filter: brightness(70%);
   // filter: brightness(40%);
   // margin-top: 20px;
   justify-content: center;
@@ -27,7 +28,7 @@
   // background-color: red;
   .sec{
     display: flex;
-    flex:1;
+    flex:1.5;
     // cursor: pointer;
     // background-color: red;
     @media (max-width: 40em) {
@@ -51,7 +52,7 @@
       a{
         // color: red;
         cursor: pointer;
-        color:rgb(255, 255, 255);
+        // color:rgb(255, 255, 255);
         color: black;
         // font-family: "Aaargh";
         font-size: 19px;
