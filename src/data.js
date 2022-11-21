@@ -12,7 +12,7 @@ export const coffee = [
     txt: "Djimmah"
   },
   {
-    img: "",
+    img: "./assets/IMG_3061 (3).JPG",
     Location: "Eastern Ethiopia 9.31258302382947, 42.12399714838904",
     Flavor: "Wild berry acidity with a strong, dry edge and heavy body",
     Processing: "Natural",
@@ -23,7 +23,7 @@ export const coffee = [
     txt: "Harrar"
   },
   {
-    img: "",
+    img: "./assets/IMG_6166.JPG",
     Location: "North western Oromia Region, Ethiopia (9.16748158719518, 36.34036679894677)",
     Flavor: "Noticeably wine-like and spicy flavor with floral overtones, some acidity, and sharpness",
     Processing: "Washed",
@@ -67,7 +67,7 @@ export const coffee = [
     Harvest: "February-April",
     Availability: "February-December",
     renown: "Ghimbi, Kebie ",
-    txt: "Lekmpti"
+    txt: " Lekempti"
   },
   {
     // img:"https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FCapture.PNG?alt=media&token=55968ead-8776-43e3-ab10-494159ba8be8",

@@ -64,11 +64,8 @@ export default function First() {
         <div className="one">
           <span>
             We help you find the coffee you need, when and how you need it!
-
-            Outstanding results, less worry!
-
-
           </span>
+          <span>Outstanding results, less worry!</span>
         </div>
         <div className="two">
           <span>

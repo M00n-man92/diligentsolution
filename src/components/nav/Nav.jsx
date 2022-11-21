@@ -16,7 +16,6 @@ export default function Nav() {
       <div className="first">
         <a href='#about us' onClick={(e)=>{console.log("")}}>
           <b>Our Principles</b>
-          
         </a>
       </div>
       

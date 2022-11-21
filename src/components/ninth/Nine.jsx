@@ -25,6 +25,8 @@ export default function Nine() {
   const [otherAge, setOtherAge] = useState("");
   const [quality, setQuality] = useState(0);
   const [volume, setVolume] = useState(0);
+  const [processing, setProcessing] = useState("")
+  const [anotherUnit, setAnotherUnit] = useState("")
   const [unit, setUnit] = useState("");
   const [price, setPrice] = useState(0);
   const [destination, setDestination] = useState("")
@@ -40,13 +42,13 @@ export default function Nine() {
   const [color, setColor] = useState("red");
   const send = async (user) => {
     let reply
-    if(change){
+    if (change) {
       reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
     }
-    else{
+    else {
       reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/anothercoffee", user);
     }
-    
+
     // const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
 
     return reply.data;
@@ -97,7 +99,7 @@ export default function Nine() {
         reuirment,
         period
       };
-      if (name.length > 1 ) {
+      if (name.length > 1) {
         mutate(user);
       } else {
         setErrors(true);
@@ -131,17 +133,12 @@ export default function Nine() {
             </div>
             <div className="iconsline">
               <a href="/">
-                <LinkedIn className="socialicons" />
+              <img src="./assets/clipart729602.png" alt="" />
               </a>
             </div>
             <div className="iconsline">
               <a href="/">
-                <Facebook className="socialicons" />
-              </a>
-            </div>
-            <div className="iconsline">
-              <a href="/">
-                <Link className="socialicons" />
+                <img src="./assets/clipart872578.png" alt="" />
               </a>
             </div>
             <div className="iconsline">
@@ -177,19 +174,21 @@ export default function Nine() {
           <div className="postiton">
 
             <Button
+            
+            style={{backgroundColor : "#4A2C2A"}}
               className="button"
               onClick={() => setChange(!change)}>
-               Contact Us
+              Contact Us
             </Button>
             <Button
               className="button"
               onClick={() => setChange(!change)}>
-               Submit Request
+              Submit Request
             </Button>
           </div>
           <div className="one">
 
-            <TextField className='texting' label="Comapny Name"
+            <TextField className='texting' label="Company Name"
               onChange={(e) => setName(e.target.value)}
               fullWidth
               type="text"
@@ -222,7 +221,7 @@ export default function Nine() {
                   <MenuItem value="Limu">Limu</MenuItem>
                   <MenuItem value="Teppi">Teppi</MenuItem>
                   <MenuItem value="Gujji">Gujji</MenuItem>
-                  <MenuItem value="Lekmpti">Lekmpti</MenuItem>
+                  <MenuItem value="Lekmpti">Lekempti</MenuItem>
                   <MenuItem value="Sidamo">Sidamo</MenuItem>
                   <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
                 </Select>
@@ -261,13 +260,14 @@ export default function Nine() {
 
             <Button
               className="button"
+              style={{backgroundColor:"#4A2C2A"}}
               onClick={() => setChange(!change)}>
-               Submit Request
+              Submit Request
             </Button>
             <Button
               className="button"
               onClick={() => setChange(!change)}>
-               Contact Us
+              Contact Us
             </Button>
 
           </div>
@@ -301,6 +301,25 @@ export default function Nine() {
 
             <Box className="texting">
               <FormControl fullWidth>
+                <InputLabel >Processing</InputLabel>
+                <Select
+
+                  value={processing}
+                  label="Coffee Profile"
+                  onChange={(e) => setProcessing(e.target.value)}
+                  required
+                >
+                  <MenuItem value="Washed">Washed</MenuItem>
+                  <MenuItem value="Natural">Natural</MenuItem>
+
+                </Select>
+              </FormControl>
+            </Box>
+          </div>
+          <div className="one">
+
+            <Box className="texting">
+              <FormControl fullWidth>
                 <InputLabel >Origin</InputLabel>
                 <Select
 
@@ -314,7 +333,7 @@ export default function Nine() {
                   <MenuItem value="Limu">Limu</MenuItem>
                   <MenuItem value="Teppi">Teppi</MenuItem>
                   <MenuItem value="Gujji">Gujji</MenuItem>
-                  <MenuItem value="Lekmpti">Lekmpti</MenuItem>
+                  <MenuItem value="Lekmpti">Lekempti</MenuItem>
                   <MenuItem value="Sidamo">Sidamo</MenuItem>
                   <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
                 </Select>
@@ -361,12 +380,27 @@ export default function Nine() {
 
           <div className="one">
             <TextField
-              className='texting' label="Target Price"
+              className='textingg' label="Target Price"
               onChange={(e) => setPrice(e.target.value)}
               value={price}
-              fullWidth
               type="number"
             />
+            <Box className="texting" >
+              <FormControl className='texting'>
+                <InputLabel >Unit</InputLabel>
+                <Select
+
+                  value={anotherUnit}
+                  label="Coffee Profile"
+                  onChange={(e) => setAnotherUnit(e.target.value)}
+                  required
+                >
+                  <MenuItem value="$/lbs">$/lbs</MenuItem>
+                  <MenuItem value="$/Ton">$/Ton</MenuItem>
+
+                </Select>
+              </FormControl>
+            </Box>
           </div>
           <div className="one">
             <TextField
@@ -393,7 +427,7 @@ export default function Nine() {
           </div>
           <div className="one">
             <TextField
-              label="Additional Requriments"
+              label="Additional Requirements"
               type="text"
               onChange={(e) => setRequirment(e.target.value)}
               value={reuirment}
