@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Axios from "axios"
 import "./nine.scss";
 
-import { Phone, Email, LocationOn, Telegram, Link, WhatsApp, LinkedIn, Facebook } from '@mui/icons-material';
+import { Phone, Email, LocationOn, Telegram, WhatsApp } from '@mui/icons-material';
 import TextField from "@mui/material/TextField";
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
