@@ -126,8 +126,8 @@
   display: none;
   &.active {
     width: 100%;
-    background-color: #112d17;
-
+    // background-color: #112d17;
+background-color: white;
     // position: fixed;
 
     // top: 50%;
@@ -156,7 +156,8 @@
       h2 {
         font-size: 48px;
         font-family: "Aaargh";
-        color: white;
+        // color: white;
+        color: #112d17;
         @media (max-width: 40em) {
           font-size: 22px;
         }
@@ -172,7 +173,8 @@
       flex-wrap: wrap;
       .somethin {
         width: 25%;
-        background-color: #060e08;
+        // background-color: #060e08;
+        background-color: #112d17;
         display: flex;
         height: 95%;
         // border: 1px solid black;

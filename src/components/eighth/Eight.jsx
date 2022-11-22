@@ -66,9 +66,11 @@ export default function Eight({ isOpen, isSet, isObj, neObj }) {
               </span>
             </div>
             <div className="duos">
+              <a href="#contact us">
               <button>
                 Submit your request
               </button>
+              </a>
             </div>
           </div>
         </div>
