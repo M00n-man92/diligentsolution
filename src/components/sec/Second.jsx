@@ -6,7 +6,10 @@ export default function Second() {
     <div className='second'>
       <div className="one">
         <h3>
-          Ethiopia: Where coffee and Mankind call home
+          Ethiopia: Where coffee and
+        </h3>
+        <h3>
+        Mankind call home
         </h3>
       </div>
       <div className="two">
