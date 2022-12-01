@@ -27,8 +27,10 @@
     height: inherit;
     width: inherit;
     @media (max-width: 40em) {
+      height: unset;
+      width: unset;
       // background-color: red;
-      // flex: 0.5;
+      flex:unset;
       height: 100%;
       margin-left: 5%;
       margin-right: 5%;
@@ -106,11 +108,14 @@
     .gps{
       display: flex;
       // align-items: center;
-      background-color: blue;
+      // background-color: blue;
       width: 100%;
       height: 100%;
+      @media (max-width:40em) {
+        display: none;
+      }
       img{
-        background-color: red;
+        // background-color: red;
         // object-fit: cover;
         width: 100%;
         height: 100%;
