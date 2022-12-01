@@ -24,6 +24,8 @@
     margin-top: 3%;
     margin-left: 10%;
     margin-right: 0%;
+    height: inherit;
+    width: inherit;
     @media (max-width: 40em) {
       // background-color: red;
       // flex: 0.5;
@@ -97,16 +99,33 @@
             font-size: 12px;
           }
         }
+        
+      }
+      
+    }
+    .gps{
+      display: flex;
+      // align-items: center;
+      background-color: blue;
+      width: 100%;
+      height: 100%;
+      img{
+        background-color: red;
+        // object-fit: cover;
+        width: 100%;
+        height: 100%;
       }
     }
   }
   .second {
-    // flex: 1;
+    // background-color: red;
+    flex: 1;
     margin-left: 2%;
     margin-right: 10%;
     margin-top: 3%;
     background-color: white;
-    width: 30%;
+    justify-content: space-evenly;
+    // width: 30%;
     border-radius: 7px;
     // display: flex;
     // background-color: red;
@@ -120,14 +139,29 @@
       
       // background-color: red;
     }
-    .postiton{
+    .position{
       display: flex;
-      flex-direction: column;
-      // justify-content: flex-start;
+      // flex-direction: column;
+      justify-content: center;
       align-items: center;
       position: relative;
+      width: 90%;
       // background-color: red;
-      height: 100%;
+      // height: 100%;
+      // right: -60%;
+      @media (max-width:40em) {
+        // right: -100%;
+      }
+    }
+    .postiton{
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      
+      // background-color: red;
+      // height: 100%;
       // right: -60%;
       @media (max-width:40em) {
         // right: -100%;
@@ -136,6 +170,7 @@
         background-color: #2d767f;
         color: white;
         margin-top: 1%;
+        margin-right: 4%;
         width: 40%;
         font-size: 13px;
         // font-family: "Roboto-Regular";
@@ -146,6 +181,7 @@
       margin-left: 3%;
       margin-bottom: 3%;
       // margin-right: 10%;
+      width: 87%;
       margin-top: 3%;
       @media (max-width: 40em) {
         margin-right: 0%;

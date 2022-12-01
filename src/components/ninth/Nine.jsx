@@ -133,7 +133,7 @@ export default function Nine() {
             </div>
             <div className="iconsline">
               <a href="/">
-              <img src="./assets/clipart729602.png" alt="" />
+                <img src="./assets/clipart729602.png" alt="" />
               </a>
             </div>
             <div className="iconsline">
@@ -164,7 +164,9 @@ export default function Nine() {
 
         </div>
 
-
+        <div className="gps">
+          <img src="./assets/gps.PNG" alt="" />
+        </div>
 
       </div>
 
@@ -174,8 +176,8 @@ export default function Nine() {
           <div className="postiton">
 
             <Button
-            
-            style={{backgroundColor : "#4A2C2A"}}
+
+              style={{ backgroundColor: "#4A2C2A" }}
               className="button"
               onClick={() => setChange(!change)}>
               Contact Us
@@ -260,7 +262,7 @@ export default function Nine() {
 
             <Button
               className="button"
-              style={{backgroundColor:"#4A2C2A"}}
+              style={{ backgroundColor: "#4A2C2A" }}
               onClick={() => setChange(!change)}>
               Submit Request
             </Button>
@@ -278,152 +280,192 @@ export default function Nine() {
               type="text"
               required />
           </div>
-          <div className="one">
+          <div className="position">
+            <div className="one">
 
-            <Box className="texting">
-              <FormControl fullWidth>
-                <InputLabel >Commodity</InputLabel>
-                <Select
+              <TextField className='texting' label="Name"
+                onChange={(e) => setName(e.target.value)}
+                fullWidth
+                type="text"
+                required />
+            </div>
+            <div className="one">
 
-                  value={commodity}
-                  label="Coffee Profile"
-                  onChange={(e) => setCommodity(e.target.value)}
-                  required
-                >
-                  <MenuItem value="Green">Green</MenuItem>
-                  <MenuItem value="Roasted">Roasted</MenuItem>
-
-                </Select>
-              </FormControl>
-            </Box>
+              <TextField
+                className='texting' label="Mail"
+                onChange={(e) => setEmail(e.target.value)}
+                fullWidth
+                type="email"
+                required
+              />
+            </div>
           </div>
-          <div className="one">
+          <div className="position">
+            <div className="one">
+            <TextField className='texting' label="Commodity"
+                onChange={(e) => setCommodity(e.target.value)}
+                fullWidth
+                type="text"
+                required />
+              {/* <Box className="texting">
+                <FormControl fullWidth>
+                  <InputLabel >Commodity</InputLabel>
+                  <Select
 
-            <Box className="texting">
-              <FormControl fullWidth>
-                <InputLabel >Processing</InputLabel>
-                <Select
+                    value={commodity}
+                    label="Coffee Profile"
+                    onChange={(e) => setCommodity(e.target.value)}
+                    required
+                  >
+                    <MenuItem value="Green">Green</MenuItem>
+                    <MenuItem value="Roasted">Roasted</MenuItem>
 
-                  value={processing}
-                  label="Coffee Profile"
-                  onChange={(e) => setProcessing(e.target.value)}
-                  required
-                >
-                  <MenuItem value="Washed">Washed</MenuItem>
-                  <MenuItem value="Natural">Natural</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box> */}
+            </div>
+            <div className="one">
 
-                </Select>
-              </FormControl>
-            </Box>
+              <Box className="texting">
+                <FormControl fullWidth>
+                  <InputLabel >Processing</InputLabel>
+                  <Select
+
+                    value={processing}
+                    label="Coffee Profile"
+                    onChange={(e) => setProcessing(e.target.value)}
+                    required
+                  >
+                    <MenuItem value="Washed">Washed</MenuItem>
+                    <MenuItem value="Natural">Natural</MenuItem>
+
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
           </div>
-          <div className="one">
+          <div className="position">
+            <div className="one">
 
-            <Box className="texting">
-              <FormControl fullWidth>
-                <InputLabel >Origin</InputLabel>
-                <Select
+              <Box className="texting">
+                <FormControl fullWidth>
+                  <InputLabel >Origin</InputLabel>
+                  <Select
 
-                  value={otherAge}
-                  label="Coffee Profile"
-                  onChange={(e) => setOtherAge(e.target.value)}
-                  required
-                >
-                  <MenuItem value="Djimmah">Djimmah</MenuItem>
-                  <MenuItem value="Hrrar">Harrar</MenuItem>
-                  <MenuItem value="Limu">Limu</MenuItem>
-                  <MenuItem value="Teppi">Teppi</MenuItem>
-                  <MenuItem value="Gujji">Gujji</MenuItem>
-                  <MenuItem value="Lekmpti">Lekempti</MenuItem>
-                  <MenuItem value="Sidamo">Sidamo</MenuItem>
-                  <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
+                    value={otherAge}
+                    label="Coffee Profile"
+                    onChange={(e) => setOtherAge(e.target.value)}
+                    required
+                  >
+                    <MenuItem value="Djimmah">Djimmah</MenuItem>
+                    <MenuItem value="Hrrar">Harrar</MenuItem>
+                    <MenuItem value="Limu">Limu</MenuItem>
+                    <MenuItem value="Teppi">Teppi</MenuItem>
+                    <MenuItem value="Gujji">Gujji</MenuItem>
+                    <MenuItem value="Lekmpti">Lekempti</MenuItem>
+                    <MenuItem value="Sidamo">Sidamo</MenuItem>
+                    <MenuItem value="Yirgacheffee">Yirgacheffee</MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
+            <div className="one">
+
+              <Box className="texting">
+                <FormControl fullWidth>
+                  <InputLabel >Quality/Grade</InputLabel>
+                  <Select
+
+                    value={quality}
+                    label="Coffee Profile"
+                    onChange={(e) => setQuality(e.target.value)}
+                    required
+                  >
+                    <MenuItem value={1}>1</MenuItem>
+                    <MenuItem value={2}>2</MenuItem>
+                    <MenuItem value={3}>3</MenuItem>
+                    <MenuItem value={4}>4</MenuItem>
+                    <MenuItem value={5}>5</MenuItem>
+
+                  </Select>
+                </FormControl>
+              </Box>
+            </div>
           </div>
-          <div className="one">
+          <div className="position">
+            <div className="position">
+              <div className="one">
 
-            <Box className="texting">
-              <FormControl fullWidth>
-                <InputLabel >Quality/Grade</InputLabel>
-                <Select
+                <TextField className='texting' label="Volume"
+                  onChange={(e) => setVolume(e.target.value)}
+                  value={volume}
+                  fullWidth
+                  type="number"
+                  required />
+              </div>
+              <div className="one">
+                <TextField className='texting' label="Unit"
+                  onChange={(e) => setUnit(e.target.value)}
+                  value={unit}
+                  fullWidth
+                  type="text"
+                  required />
+              </div>
+            </div>
+            <div className="position">
+              <div className="one">
+                <TextField
+                  className='texting' label="Target Price"
+                  onChange={(e) => setPrice(e.target.value)}
+                  value={price}
+                  type="number"
+                />
+              </div>
+              <div className="one">
+                <Box className="texting" >
+                  <FormControl className='texting'>
+                    <InputLabel >Unit</InputLabel>
+                    <Select
 
-                  value={quality}
-                  label="Coffee Profile"
-                  onChange={(e) => setQuality(e.target.value)}
-                  required
-                >
-                  <MenuItem value={1}>1</MenuItem>
-                  <MenuItem value={2}>2</MenuItem>
-                  <MenuItem value={3}>3</MenuItem>
-                  <MenuItem value={4}>4</MenuItem>
-                  <MenuItem value={5}>5</MenuItem>
+                      value={anotherUnit}
+                      label="Coffee Profile"
+                      onChange={(e) => setAnotherUnit(e.target.value)}
+                      required
+                    >
+                      <MenuItem value="$/lbs">$/lbs</MenuItem>
+                      <MenuItem value="$/Ton">$/Ton</MenuItem>
 
-                </Select>
-              </FormControl>
-            </Box>
+                    </Select>
+                  </FormControl>
+                </Box>
+
+              </div>
+            </div>
           </div>
-          <div className="one">
-
-            <TextField className='textingg' label="Volume"
-              onChange={(e) => setVolume(e.target.value)}
-              value={volume}
-              fullWidth
-              type="number"
-              required />
-            <TextField className='textingg' label="Unit"
-              onChange={(e) => setUnit(e.target.value)}
-              value={unit}
-              fullWidth
-              type="text"
-              required />
-          </div>
-
-          <div className="one">
-            <TextField
-              className='textingg' label="Target Price"
-              onChange={(e) => setPrice(e.target.value)}
-              value={price}
-              type="number"
-            />
-            <Box className="texting" >
-              <FormControl className='texting'>
-                <InputLabel >Unit</InputLabel>
-                <Select
-
-                  value={anotherUnit}
-                  label="Coffee Profile"
-                  onChange={(e) => setAnotherUnit(e.target.value)}
-                  required
-                >
-                  <MenuItem value="$/lbs">$/lbs</MenuItem>
-                  <MenuItem value="$/Ton">$/Ton</MenuItem>
-
-                </Select>
-              </FormControl>
-            </Box>
-          </div>
-          <div className="one">
-            <TextField
-              className='texting' label="Destination"
-              onChange={(e) => setDestination(e.target.value)}
-              value={destination}
-              fullWidth
-              type="text"
-            />
-          </div>
-          <div className="one">
-            <TextField
-              id="date"
-              label="Prefered Shipment Period"
-              type="date"
-              // defaultValue="2022-10-21"
-              sx={{ width: 220 }}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              onChange={(e) => setPeriod(e.target.value)}
-              value={period}
-            />
+          <div className="position">
+            <div className="one">
+              <TextField
+                className='texting' label="Destination"
+                onChange={(e) => setDestination(e.target.value)}
+                value={destination}
+                fullWidth
+                type="text"
+              />
+            </div>
+            <div className="one">
+              <TextField
+                id="date"
+                label="Prefered Shipment Period"
+                type="date"
+                // defaultValue="2022-10-21"
+                sx={{ width: 220 }}
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                onChange={(e) => setPeriod(e.target.value)}
+                value={period}
+              />
+            </div>
           </div>
           <div className="one">
             <TextField
@@ -451,6 +493,6 @@ export default function Nine() {
       {/* second form  */}
 
 
-    </div>
+    </div >
   )
 }

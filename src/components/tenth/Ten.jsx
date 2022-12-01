@@ -41,15 +41,19 @@ export default function Ten() {
       </div>
       <div className="attributes">
         <div className="single">
-          <div className="icon">
-            <Search style={{ height: 40, width: 100 }} />
+          <div className="anothersingel">
+            <div className="icon">
+              <Search style={{ height: 40, width: 100 }} />
+            </div>
+            <h2>
+              Diligence
+            </h2>
+            <span>We are motivated to keep following up on issues that are of value to you until you find the results you need.</span>
           </div>
-          <h2>
-            Diligence
-          </h2>
-          <span>We are motivated to keep following up on issues that are of value to you until you find the results you need.</span>
+
         </div>
         <div className="single">
+        <div className="anothersingel">
           <div className="icon">
             <VerifiedUser style={{ height: 40, width: 100 }} />
           </div>
@@ -58,7 +62,9 @@ export default function Ten() {
           </h2>
           <span>We will attend to you and your interests with out fault and vow to serve you with the integrity that befits you!</span>
         </div>
+        </div>
         <div className="single">
+        <div className="anothersingel">
           <div className="icon">
             <Handshake style={{ height: 40, width: 100 }} />
           </div>
@@ -66,6 +72,7 @@ export default function Ten() {
             Good- faith
           </h2>
           <span>We understand that trust is not something appears overnight. That is why we vow to start working on your business interests with the utmost good faith!</span>
+        </div>
         </div>
       </div>
     </div>
