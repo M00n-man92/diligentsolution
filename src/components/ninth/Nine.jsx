@@ -21,6 +21,7 @@ export default function Nine() {
   const [message, setMessage] = useState("");
 
   //second form
+  const [companyName, setCompanyName] = useState("");
   const [commodity, setCommodity] = useState("");
   const [otherAge, setOtherAge] = useState("");
   const [quality, setQuality] = useState(0);
@@ -88,23 +89,26 @@ export default function Nine() {
     }
     else if (!change) {
       const user = {
+        companyName,
         name,
+        email,
         commodity,
         otherAge,
         quality,
         volume,
         unit,
         price,
+        anotherUnit,
         destination,
         reuirment,
         period
       };
-      if (name.length > 1) {
+      if (name.length > 1 && email.length>1) {
         mutate(user);
       } else {
         setErrors(true);
         setColor("red")
-        setKnow("please make sure you've given us your company name'");
+        setKnow("please make sure you've given us your name and email'");
       }
     }
   };
@@ -275,7 +279,7 @@ export default function Nine() {
           </div>
           <div className="one">
             <TextField className='texting' label="Company Name"
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setCompanyName(e.target.value)}
               fullWidth
               type="text"
               required />
@@ -477,12 +481,12 @@ export default function Nine() {
           </div>
           <div className="two">
             <Button
-              onClick={(e) => console.log(message, email, name)}
+              onClick={(e) => handleChange(e)}
               type="submit"
               disabled={isLoading}
               startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
             > Send</Button>
-            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span></span>}
+            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{color:"green"}}>{know}</span>}
           </div>
 
         </div>
