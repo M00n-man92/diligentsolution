@@ -42,11 +42,11 @@ export default function Five() {
 
             </p>
             <p>
-              Simply put, we get you the coffee you need: type, price range, and shipment schedule.
+            Simply put, we get you the coffee you need: type, price range, and shipment schedule.
             </p>
             
             <p>
-              You share with us the details of your request including:
+            You share with us the details of your request, including:
             </p>
             <ul>
               <li>
@@ -66,8 +66,7 @@ export default function Five() {
               </li>
             </ul>
             <p>
-              We then disseminate your request with exporters who work with us and make sure they comply with all your requirements. Instead of communicating with numerous exporters individually, you contact them all at one place. However, that is not even the best part!
-              We will also coordinate with the exporters and facilitate the export process including quality inspections, document verification and so on totally for free!
+            We then disseminate your request with exporters who work with us and make sure they comply with all your requirements. Instead of communicating with numerous exporters individually, you contact them all at one place. However, that is not even the best part! We will also coordinate with the exporters and facilitate the export process, including quality inspections, document verification, and so on, totally for free!
 
             </p>
 

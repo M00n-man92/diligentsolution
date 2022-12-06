@@ -15,15 +15,10 @@ export default function Second() {
       <div className="two">
         <div className="wahid">
           <p>
-            Since its discovery ages ago, some of the most extraordinary coffees to be found anywhere in the world are produced in Ethiopia.
-            Ethiopia is widely recognized as the birthplace of coffee, and among coffee connoisseurs, the tale of a goat herder, a monk, and errant goats is almost as well-known as coffee itself.
-            The biggest producer of coffee in Africa today, Ethiopia is thought to have been exporting coffee as early as the 17th century, though the trade didn't take off until the 19th century.
+          Ethiopia has produced some of the most extraordinary coffees in the world since its discovery eons ago. Ethiopia is widely recognized as the birthplace of coffee, and among coffee connoisseurs, the tale of a goat herder, a monk, and errant goats is almost as well-known as coffee itself. The biggest producer of coffee in Africa today, Ethiopia, is thought to have been exporting coffee as early as the 17th century, though the trade didn't take off until the 19th century.
           </p>
           <p>
-            The value of coffee to the economy of the nation today cannot be overstated.
-            Ethiopia is heavily dependent on coffee as a primary source of income: it accounts for close to 70% of all export revenues. An estimated 15 million Ethiopians are employed in the coffee industry.
-            Ethiopia uses three different "production systems" for coffee: Forest Coffees, where locals harvest coffee that has grown wild; Garden Coffees, grown in small holder plots (typically measured in terms of trees rather than hectares); and Plantation Coffees, which make up a very small portion of Ethiopian coffee and are grown on vast estates. The Garden Coffee system is used to generate the great majority of the nation's coffee. Wet processing and sun-drying are the two most common methods for processing coffee. Currently, only 20–30% of Ethiopian coffee is washed, with the remaining 70–80% being sun- or no-washed.
-            Ethiopians are among the continent's biggest coffee drinkers, and the coffee trend there is steadily expanding. Domestic consumption accounts for about half of the nation's coffee production.
+          The value of coffee to the economy of the nation today cannot be overstated. Ethiopia is heavily dependent on coffee as a primary source of income: it accounts for close to 70% of all export revenues. An estimated 15 million Ethiopians are employed in the coffee industry. Ethiopia uses three different "production systems" for coffee: Forest Coffees, where locals harvest coffee that has grown wild; Garden Coffees, grown in small holder plots (typically measured in terms of trees rather than hectares); and Plantation Coffees, which make up a very small portion of Ethiopian coffee and are grown on vast estates. The Garden Coffee System is used to generate the great majority of the nation's coffee. Wet processing and sun-drying are the two most common methods for processing coffee. Currently, only 20–30% of Ethiopian coffee is washed, with the remaining 70–80% being sun- or no-washed. Ethiopians are among the continent's biggest coffee drinkers, and the coffee trend there is steadily expanding. Domestic consumption accounts for about half of the nation's coffee production.
           </p>
         </div>
         <div className="duos">

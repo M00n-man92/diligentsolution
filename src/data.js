@@ -35,7 +35,7 @@ export const coffee = [
   },
   {
     // img:"https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_3061%20(3).JPG?alt=media&token=e60a2a13-c0d9-4018-bbe0-5d51e18c8c5d",
-    img: "./assets/IMG_6979.JPG",
+    img: "./assets/20221008_111707-min (2).jpg",
     Location: "Southern Ethiopia 7.196670606110836, 35.427997270582615",
     Flavor: "Wild, bright, fruity, complex, some deeper hints like cocoa",
     Processing: "Washed",
@@ -60,7 +60,7 @@ export const coffee = [
   {
     // img:"https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FIMG_6979.JPG?alt=media&token=44add76f-8b59-4c2e-9c1a-80d17de03efb",
     
-    img: "./assets/20221008_111707-min (2).jpg",
+    img: "./assets/Capture1.PNG",
     Location: "Western Oromia Region of Ethiopia (9.090426744090372, 36.555345692458054)",
     Flavor: "Heavier body, rich yet balanced, lingering profile",
     Processing: "Natural, washed",
@@ -84,7 +84,7 @@ export const coffee = [
   },
   {
     // img:"https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FCapture1.PNG?alt=media&token=d15b6e5c-155d-4f8d-b8a9-799d9021f0c2",
-    img: "./assets/Capture1.PNG",
+    img: "./assets/IMG_6979.JPG",
     Location: "East Welega Zone of the Oromia Region (6.160945897380547, 38.20163697700685)",
     Flavor: "Classic Arabica profile, smooth, mild, fruity acidity with a floral aroma",
     Processing: "Natural, washed",

@@ -103,7 +103,7 @@ export default function Nine() {
         reuirment,
         period
       };
-      if (name.length > 1 && email.length>1) {
+      if (name.length > 1 && email.length > 1) {
         mutate(user);
       } else {
         setErrors(true);
@@ -306,12 +306,12 @@ export default function Nine() {
           </div>
           <div className="position">
             <div className="one">
-            <TextField className='texting' label="Commodity"
+              {/* <TextField className='texting' label="Commodity"
                 onChange={(e) => setCommodity(e.target.value)}
                 fullWidth
                 type="text"
-                required />
-              {/* <Box className="texting">
+                required /> */}
+              <Box className="texting">
                 <FormControl fullWidth>
                   <InputLabel >Commodity</InputLabel>
                   <Select
@@ -326,7 +326,7 @@ export default function Nine() {
 
                   </Select>
                 </FormControl>
-              </Box> */}
+              </Box>
             </div>
             <div className="one">
 
@@ -408,12 +408,27 @@ export default function Nine() {
                   required />
               </div>
               <div className="one">
-                <TextField className='texting' label="Unit"
+                <Box className="texting" >
+                  <FormControl className='texting'>
+                    <InputLabel >Unit</InputLabel>
+                    <Select
+
+                      value={unit}
+                      label="Coffee Profile"
+                      onChange={(e) => setUnit(e.target.value)}
+                    >
+                      <MenuItem value="Bags">Bags</MenuItem>
+                      <MenuItem value="MT">MT</MenuItem>
+                      <MenuItem value="Box/Container">Box/Container</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Box>
+                {/* <TextField className='texting' label="Unit"
                   onChange={(e) => setUnit(e.target.value)}
                   value={unit}
                   fullWidth
                   type="text"
-                  required />
+                  required /> */}
               </div>
             </div>
             <div className="position">
@@ -436,7 +451,7 @@ export default function Nine() {
                       onChange={(e) => setAnotherUnit(e.target.value)}
                       required
                     >
-                      <MenuItem value="$/lbs">$/lbs</MenuItem>
+                      <MenuItem value="$/Lbs">$/Lbs</MenuItem>
                       <MenuItem value="$/Ton">$/Ton</MenuItem>
 
                     </Select>
@@ -486,7 +501,7 @@ export default function Nine() {
               disabled={isLoading}
               startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
             > Send</Button>
-            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{color:"green"}}>{know}</span>}
+            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{ color: "green" }}>{know}</span>}
           </div>
 
         </div>

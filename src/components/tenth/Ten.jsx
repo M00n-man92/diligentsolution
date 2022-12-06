@@ -36,7 +36,7 @@ export default function Ten() {
           Principles
         </h2>
         <span>
-          We will attend to you and your interests without fault, and we vow to serve you with the integrity that befits you! That is how we build trust as well as the future!
+        We vow to always look out for you and your interests and to serve you with the integrity that befits you! That is how we build trust as well as the future!
         </span>
       </div>
       <div className="attributes">
@@ -60,7 +60,7 @@ export default function Ten() {
           <h2>
             Integrity
           </h2>
-          <span>We will attend to you and your interests with out fault and vow to serve you with the integrity that befits you!</span>
+          <span>We will attend to you and your interests without fault and vow to serve you with the integrity that befits you!</span>
         </div>
         </div>
         <div className="single">
@@ -69,9 +69,9 @@ export default function Ten() {
             <Handshake style={{ height: 40, width: 100 }} />
           </div>
           <h2>
-            Good- faith
+          Good Faith
           </h2>
-          <span>We understand that trust is not something appears overnight. That is why we vow to start working on your business interests with the utmost good faith!</span>
+          <span>We understand that trust is not something that appears overnight. That is why we vow to start working on your business interests with the utmost good faith!</span>
         </div>
         </div>
       </div>

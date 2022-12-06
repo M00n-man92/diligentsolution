@@ -63,13 +63,13 @@ export default function First() {
       <div className="info">
         <div className="one">
           <span>
-            We help you find the coffee you need, when and how you need it!
+          We help you find the coffee you need, when and how you need it!
           </span>
           <span>Outstanding results, less worry!</span>
         </div>
         <div className="two">
           <span>
-            We aid in easing your in finding the coffee you want in the time and price range you specify with significantly less headache!
+          We help you find the coffee you want within the time and price range you specify, with significantly less headache!
           </span>
         </div>
         <div className="three">

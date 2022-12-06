@@ -30,11 +30,7 @@ export default function Four() {
         </div>
         <div className="estnen">
           <p>
-          The minimum coffee pricing directive was a new regulation that the Ethiopia Tea & Coffee Association issued to the market.
-The regulation requires Ethiopian coffee exporters to sell their product at a minimum price or more.
-The weekly minimum pricing is broken down by location, grade, and exporter type.
-
-          </p>
+          The minimum coffee pricing directive was a new regulation that the Ethiopian Tea & Coffee Association issued to the market. The regulation obliges Ethiopian coffee exporters to sell their product at a minimum price or more. The weekly minimum pricing is broken down by location, grade, and exporter type.</p>
         </div>
       </div>
     </div>
