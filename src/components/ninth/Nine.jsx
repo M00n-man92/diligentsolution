@@ -44,10 +44,10 @@ export default function Nine() {
   const send = async (user) => {
     let reply
     if (change) {
-      reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/coffee", user);
+      reply = await Axios.post("https://api-production-b6bc.up.railway.app/api/user/coffee", user);
     }
     else {
-      reply = await Axios.post("https://jazzythings.herokuapp.com/api/user/anothercoffee", user);
+      reply = await Axios.post("https://api-production-b6bc.up.railway.app/api/user/anothercoffee", user);
     }
 
     // const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
@@ -55,7 +55,7 @@ export default function Nine() {
     return reply.data;
   };
 
-  const { mutate, isLoading } = useMutation(send, {
+  const { mutate, isLoading, isError, isSuccess } = useMutation(send, {
     onSuccess: (data) => {
       setErrors(false)
       console.log(data);
@@ -63,9 +63,10 @@ export default function Nine() {
       setColor("green");
     },
     onError: (e) => {
+      
       setErrors(true);
       setKnow(e.response.data.error.message);
-      console.log(e);
+      console.log("there lis a big erroe");
     },
   });
 
@@ -82,6 +83,7 @@ export default function Nine() {
       if (name.length > 1 && email.length > 1 && message.length > 1) {
         mutate(user);
       } else {
+
         setErrors(true);
         setColor("red")
         setKnow("please make sure you've correctly filled the boxes'");
@@ -112,7 +114,7 @@ export default function Nine() {
       }
     }
   };
-
+  // console.log(isError, isLoading, isSuccess)
   return (
     <div className='nine' id="contact us">
       <div className="first">
@@ -501,7 +503,7 @@ export default function Nine() {
               disabled={isLoading}
               startIcon={isLoading ? <CircularProgress color="inherit" size={25} /> : null}
             > Send</Button>
-            {error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{ color: "green" }}>{know}</span>}
+            {isError || error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{ color: "green" }}>{know}</span>}
           </div>
 
         </div>
