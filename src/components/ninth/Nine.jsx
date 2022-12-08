@@ -55,7 +55,7 @@ export default function Nine() {
     return reply.data;
   };
 
-  const { mutate, isLoading, isError, isSuccess } = useMutation(send, {
+  const { mutate, isLoading, isError } = useMutation(send, {
     onSuccess: (data) => {
       setErrors(false)
       console.log(data);
