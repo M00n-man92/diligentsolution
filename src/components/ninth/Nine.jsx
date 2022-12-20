@@ -15,7 +15,6 @@ import { Button } from '@mui/material';
 import { useMutation } from "react-query";
 export default function Nine() {
   /// first form
-  const [age, setAge] = useState('');
   const [subject, setSubject] = useState('');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -80,7 +79,7 @@ export default function Nine() {
     setKnow("");
     setColor("");
     if (change) {
-      const user = { name, email, message, age };
+      const user = { name, email, message, subject };
       if (name.length > 1 && email.length > 1 && message.length > 1) {
         mutate(user);
       } else {

@@ -29,8 +29,12 @@ export default function Eleven() {
             <img src="./assets/52d02df0-68f3-11ed-a2d1-73ce7a3dfa49.png" alt="" />
           </a>
         </div>
-
+<div className="single">
+<a href='./assets/ከ04_03_2015_10_04_2015_ዓ_ም_ተመጣጣኝ_ዝቅተኛ_የቡና_መሸጫ_ዋጋ_ለ2015_አዲስ_ምርት_.xlsx' download>Click to download this weeks price of coffee</a>
+</div>
       </div>
+
+      
     </div>
   )
 }
