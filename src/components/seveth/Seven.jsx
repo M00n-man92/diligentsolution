@@ -22,7 +22,8 @@ export default function Seven({image, title}) {
         width={width }
         height={height }
         src={image} // use normal <img> attributes as prop
-        placeholderSrc="./assets/diligent.png"
+        placeholderSrc="./assets/Artboard 1@4x.png"
+        // ./assets/diligent.png
         effect='blur'
         className='img'
      />

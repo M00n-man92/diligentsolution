@@ -30,7 +30,8 @@ export default function Five() {
             height={height}
             src="./assets/3c368fe0-68ed-11ed-a2d1-73ce7a3dfa49.jpeg"
             // src="https://firebasestorage.googleapis.com/v0/b/coffee-b91b2.appspot.com/o/coffe%2FAmaro%20Gayo.jfif?alt=media&token=a6882fa9-7c90-4fbb-94c8-0c14d9f4003b" // use normal <img> attributes as prop
-            placeholderSrc="./assets/diligent.png"
+            // ./assets/diligent.png
+            placeholderSrc="./assets/Artboard 1@4x.png"
             effect='blur'
           // className='img'
           />
