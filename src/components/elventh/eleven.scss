@@ -47,7 +47,7 @@
         img{
           width: 150px;
           height: 70px;
-          object-fit: contain;
+          object-fit: cover;
           @media (max-width: 40em) {
             width: 100px;
 
@@ -57,14 +57,11 @@
       }
       
     }
-    .single:nth-child(2){
+    .single:nth-child(4){
       img{
-        object-fit: cover;
+        object-fit: contain;
       }
     }
-    .single:nth-child(3){
-      img{object-fit: cover;}
-      
-    }
+    
   }
 }

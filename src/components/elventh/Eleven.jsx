@@ -8,8 +8,8 @@ export default function Eleven() {
       </span>
       <div className="linkes">
         <div className="single">
-          <a href="https://www.ecea.org.et" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/3e1b8a40-68f2-11ed-a2d1-73ce7a3dfa49.jpeg" alt="" />
+          <a href="https://www.ethiopiancoffeeassociation.org/" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/image_2022-12-18_17-55-10.png" alt="" />
           </a>
 
         </div>
