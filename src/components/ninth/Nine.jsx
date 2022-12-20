@@ -16,6 +16,7 @@ import { useMutation } from "react-query";
 export default function Nine() {
   /// first form
   const [age, setAge] = useState('');
+  const [subject, setSubject] = useState('');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -131,6 +132,12 @@ export default function Nine() {
             </div>
             <span>+251 97 508 1993</span>
           </div>
+          <div className="estenen">
+            <div className="image">
+              <Phone />
+            </div>
+            <span>+251 07 108 1993</span>
+          </div>
           <div className="newone">
             <div className="iconsline">
               <a href="/">
@@ -204,6 +211,14 @@ export default function Nine() {
           </div>
           <div className="one">
 
+              <TextField className='texting' label="Name"
+                onChange={(e) => setName(e.target.value)}
+                fullWidth
+                type="text"
+                required />
+            </div>
+          <div className="one">
+
             <TextField
               className='texting' label="Mail"
               onChange={(e) => setEmail(e.target.value)}
@@ -213,6 +228,14 @@ export default function Nine() {
             />
           </div>
           <div className="one">
+
+              <TextField className='texting' label="Subject"
+                onChange={(e) => setSubject(e.target.value)}
+                fullWidth
+                type="text"
+                required />
+            </div>
+          {/* <div className="one">
 
             <Box className="texting">
               <FormControl fullWidth>
@@ -235,7 +258,7 @@ export default function Nine() {
                 </Select>
               </FormControl>
             </Box>
-          </div>
+          </div> */}
           <div className="one">
 
 
