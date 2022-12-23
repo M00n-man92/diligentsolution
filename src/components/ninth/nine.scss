@@ -86,6 +86,7 @@
         display: flex;
         margin-bottom: 10%;
         @media (max-width: 40em) {
+          // background-color: red;
           align-items: center;
         }
 
@@ -108,6 +109,9 @@
         // background-color: red;
         margin-top: -10%;
         margin-left: 5%;
+        @media (max-width:40em) {
+          margin-left: 7.5%;
+        }
         .image{
           display: none;
 
@@ -165,6 +169,7 @@
       // height: 100%;
       // right: -60%;
       @media (max-width:40em) {
+        // background-color: red;
         // right: -100%;
       }
     }
@@ -199,8 +204,11 @@
       width: 87%;
       margin-top: 3%;
       @media (max-width: 40em) {
+        width: 90%;
+        // align-items: flex-end;
+        // background-color: red;
         margin-right: 0%;
-        margin-left: 0%;
+        margin-left: 7%;
       }
 
       .texting {

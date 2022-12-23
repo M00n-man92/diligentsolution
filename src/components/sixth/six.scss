@@ -141,6 +141,7 @@ background-color: #296B37;
     border-radius: 10px;
     border: none;
     @media (max-width: 40em) {
+      // background-color: red;
       width: 90%;
     }
   }
@@ -153,6 +154,9 @@ background-color: #296B37;
     flex-direction: column;
     .wahid {
       // margin-top: 3%;
+      @media (max-width:40em) {
+        margin-left: 1%;
+      }
       h2 {
         font-size: 48px;
         font-family: "Aaargh";
@@ -172,7 +176,7 @@ background-color: #296B37;
       // background-color: red;
       flex-wrap: wrap;
       .somethin {
-        width: 25%;
+        width: 29.1%;
         background-color:  #1B4924;
         // background-color: #112d17;
         display: flex;
@@ -183,8 +187,10 @@ background-color: #296B37;
         margin-bottom: 2%;
         flex-direction: column;
         @media (max-width: 40em) {
+          margin-left: 1%;
           margin-right: 2%;
           height: 100%;
+          width: 30%;
           // width: 30%;
           // background-color: red;
         }
