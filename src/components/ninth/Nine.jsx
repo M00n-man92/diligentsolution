@@ -488,7 +488,8 @@ export default function Nine() {
           <div className="position">
             <div className="one">
               <TextField
-                className='texting' label="Destination"
+                className='texting'
+                label="Destination"
                 onChange={(e) => setDestination(e.target.value)}
                 value={destination}
                 fullWidth
@@ -500,6 +501,7 @@ export default function Nine() {
                 id="date"
                 label="Prefered Shipment Period"
                 type="date"
+                className='texting'
                 // defaultValue="2022-10-21"
                 sx={{ width: 220 }}
                 InputLabelProps={{
