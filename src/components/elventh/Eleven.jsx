@@ -32,7 +32,7 @@ export default function Eleven() {
           </a>
         </div>
 <div className="single">
-<a href='./assets/ከ04_03_2015_10_04_2015_ዓ_ም_ተመጣጣኝ_ዝቅተኛ_የቡና_መሸጫ_ዋጋ_ለ2015_አዲስ_ምርት_.xlsx' download><FileDownload style={{ fontSize:"200%"}}/>Click to download this weeks price of coffee</a>
+<a href='./assets/ከ04_03_2015_10_04_2015_ዓ_ም_ተመጣጣኝ_ዝቅተኛ_የቡና_መሸጫ_ዋጋ_ለ2015_አዲስ_ምርት_.xlsx' download><FileDownload style={{ fontSize:"300%"}}/>Click to download this week's price of coffee</a>
 </div>
       </div>
 
