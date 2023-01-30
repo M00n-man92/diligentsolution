@@ -135,7 +135,7 @@ export default function Nine() {
             <div className="image">
               <Phone />
             </div>
-            <span>+251 07 108 1993</span>
+            <span>+251 07 10 081 993</span>
           </div>
           <div className="newone">
             <div className="iconsline">
