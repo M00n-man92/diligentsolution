@@ -16,7 +16,7 @@ export default function Ten() {
     height = height * 6 / 10;
   }
   return (
-    <div className='ten' id="about us">
+    <div className='ten' id="principles">
       <div className="wahid">
         <LazyLoadImage
           alt=""

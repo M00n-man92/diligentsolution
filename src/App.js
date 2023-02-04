@@ -10,6 +10,7 @@ import Ten from "./components/tenth/Ten"
 // import "./spp.scss";
 import "./app.css";
 import Eleven from "./components/elventh/Eleven";
+import About from "./components/about/About";
 const App = () => {
 
   const w = window.innerWidth;
@@ -22,6 +23,7 @@ const App = () => {
           <Nav />
           <First width={w} height={h} />
           <Ten />
+          <About />
           <Second />
           <Three />
           <Four />

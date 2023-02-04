@@ -36,7 +36,7 @@ export default function First() {
 
   
   return (
-    <div className='body' id="home">
+    <div className='body'>
       <div className="swinger">
         <div className="keeponmoving" style={{ transform: `translateX(${-sizeing * itemm}%)` }}>
           {imagedata.map((item,index)=>(
