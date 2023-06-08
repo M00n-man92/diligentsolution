@@ -33,8 +33,16 @@ export default function Nav() {
           
         </a>
       </div>
+    
       </div>
-      
+          <div className="first">
+        <a href="https://bereketera.github.io/minnav/min.html" >
+          <b>
+          minimum price
+          </b>
+          
+        </a>
+      </div>  
     </div>
   )
 }
