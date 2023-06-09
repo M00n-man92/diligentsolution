@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Axios from "axios"
+// import Axios from "axios"
 import "./nine.scss"
 
 import {
@@ -9,25 +9,25 @@ import {
   Telegram,
   WhatsApp,
 } from "@mui/icons-material"
-import TextField from "@mui/material/TextField"
+/* import TextField from "@mui/material/TextField"
 import Box from "@mui/material/Box"
 import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
 import FormControl from "@mui/material/FormControl"
 import CircularProgress from "@mui/material/CircularProgress"
-import Select from "@mui/material/Select"
+import Select from "@mui/material/Select" */
 import { Button } from "@mui/material"
 
-import { useMutation } from "react-query"
+// import { useMutation } from "react-query"
 export default function Nine() {
   /// first form
-  const [subject, setSubject] = useState("")
+  /* const [subject, setSubject] = useState("")
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
+  const [message, setMessage] = useState("") */
 
   //second form
-  const [companyName, setCompanyName] = useState("")
+  /*  const [companyName, setCompanyName] = useState("")
   const [commodity, setCommodity] = useState("")
   const [otherAge, setOtherAge] = useState("")
   const [quality, setQuality] = useState(0)
@@ -38,16 +38,16 @@ export default function Nine() {
   const [price, setPrice] = useState(0)
   const [destination, setDestination] = useState("")
   const [reuirment, setRequirment] = useState("")
-  const [period, setPeriod] = useState("")
+  const [period, setPeriod] = useState("") */
 
   // handeler variables
-  const [know, setKnow] = useState("")
-  const [error, setErrors] = useState(false)
+  /* const [know, setKnow] = useState("")
+  const [error, setErrors] = useState(false) */
 
   //var to change the forms
   const [change, setChange] = useState(false)
-  const [color, setColor] = useState("red")
-  const send = async (user) => {
+  // const [color, setColor] = useState("red")
+  /*  const send = async (user) => {
     let reply
     if (change) {
       reply = await Axios.post(
@@ -64,9 +64,9 @@ export default function Nine() {
     // const reply = await Axios.post("http://localhost:5000/api/user/coffee", user);
 
     return reply.data
-  }
+  } */
 
-  const { mutate, isLoading, isError } = useMutation(send, {
+  /*  const { mutate, isLoading, isError } = useMutation(send, {
     onSuccess: (data) => {
       setErrors(false)
       console.log(data)
@@ -79,11 +79,11 @@ export default function Nine() {
       console.log("there lis a big erroe")
     },
   })
-
+ */
   // this is for the inquires form
 
   // this is or the contact form
-  const handleChange = async (e) => {
+  /* const handleChange = async (e) => {
     e.preventDefault()
     setErrors(false)
     setKnow("")
@@ -121,7 +121,7 @@ export default function Nine() {
         setKnow("please make sure you've given us your name and email'")
       }
     }
-  }
+  } */
   // console.log(isError, isLoading, isSuccess)
   return (
     <div className="nine" id="contact us">
@@ -458,8 +458,8 @@ export default function Nine() {
             > Send</Button>
             {isError || error ? <span style={{ color: color, marginLeft: 40 }}> {know}</span> : <span style={{ color: "green" }}>{know}</span>}
           </div> */
-{
-  /* <div className="one">
+
+/* <div className="one">
             <TextField
               className="texting"
               label="Company Name"
@@ -531,4 +531,3 @@ export default function Nine() {
               <span style={{ color: color, marginLeft: 40 }}>{know}</span>
             )}
           </div> */
-}
