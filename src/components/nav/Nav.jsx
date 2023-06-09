@@ -24,7 +24,7 @@ export default function Nav() {
           </a>
         </div>
         <div className="first">
-          <a href="#contact us">
+          <a href="https://bereketera.github.io/paralel-form/min.html">
             <b>Contact Us</b>
           </a>
         </div>
